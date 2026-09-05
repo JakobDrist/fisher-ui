@@ -4,7 +4,11 @@
   "private": true,
   "description": "Editable Fisher UI component source. No portfolio or website application.",
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:clouds": "vite build --config vite.clouds.config.ts",
+    "build:jelly-slider": "vite build --config vite.jelly-slider.config.ts",
+    "build:confetti": "vite build --config vite.confetti.config.ts",
+    "build:gpu": "npm run build:clouds && npm run build:jelly-slider && npm run build:confetti"
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -53,6 +57,13 @@
     "@types/react-dom": "^19.2.3",
     "@types/imagesloaded": "^4.1.7",
     "@types/three": "^0.181.0",
-    "@types/d3-geo": "^3.1.0"
+    "@types/d3-geo": "^3.1.0",
+    "typegpu": "^0.12.0",
+    "@typegpu/noise": "^0.12.0",
+    "@typegpu/react": "^0.12.0",
+    "@typegpu/sdf": "^0.12.0",
+    "wgpu-matrix": "^3.4.2",
+    "vite": "^6.1.0",
+    "unplugin-typegpu": "^0.12.1"
   }
 }

@@ -21,6 +21,8 @@ npm run typecheck
 
 The source tree matches the shadcn installation layout under `components/fisher-ui/`. React 19, TypeScript and Tailwind CSS 4 are the consumer baseline; components using Next.js or WebGPU require those runtimes. This repository is source-only and does not run the showcase website.
 
+Editable WebGPU originals live in `gpu/`, with their compiled iframe assets in `public/`. Run `npm run build:gpu` to rebuild them. The TypeScript check covers the installable React source; the GPU originals are compiled by Vite with the TypeGPU plugin.
+
 ## Updates
 
 This is a generated source mirror. Edit components in the main Fisher UI project, then regenerate the export using `npm run registry:export -- /path/to/a/new-directory`. Copy the resulting files into this repository and review the diff before committing. Direct edits here are not automatically imported back into the website. Cross-repository automatic publishing has not been configured.
