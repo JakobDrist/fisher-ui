@@ -4,13 +4,13 @@ This repository contains the editable source of 118 ready Fisher UI components, 
 
 ## Install a component
 
-Use the command on that component's Fisher UI documentation page:
+For example, install [Liquid Metal](https://jakobfisker.dk/en/ui/components/liquid-metal):
 
 ```sh
-npx shadcn@latest add https://jakobfisker.dk/r/prompt-input-2.json
+npx shadcn@latest add https://jakobfisker.dk/r/liquid-metal.json
 ```
 
-Each component can be installed independently. The CLI also installs its npm dependencies and global CSS. `catalog.json` maps every component to its files, dependencies and CSS.
+To install another component, copy the command from its [Fisher UI documentation page](https://jakobfisker.dk/en/ui). Each component can be installed independently. The CLI also installs its npm dependencies and global CSS. `catalog.json` maps every component to its files, dependencies and CSS.
 
 ## Read or check all source
 
