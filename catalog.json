@@ -47,24 +47,20 @@
         "receipt-green-9": "color(display-p3 0.332 0.634 0.442)"
       }
     },
-    "source": {
-      "name": "Satisfy UI",
-      "url": "local"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/ReceiptPrinter.tsx",
-        "target": "@components/fisher-ui/components/ReceiptPrinter.tsx",
+        "path": "components/receipt-printer/ReceiptPrinter.tsx",
+        "target": "@components/fisher-ui/receipt-printer/ReceiptPrinter.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/helpers/classname-helper.ts",
-        "target": "@components/fisher-ui/helpers/classname-helper.ts",
+        "path": "components/shared/classname-helper.ts",
+        "target": "@components/fisher-ui/shared/classname-helper.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       },
       {
@@ -145,29 +141,25 @@
         "dqnamo-red-11": "color(display-p3 1 0.57 0.55)"
       }
     },
-    "source": {
-      "name": "dqnamo",
-      "url": "https://www.dqnamo.com/experiments/hold-to-confirm"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/HoldToConfirmButton.tsx",
-        "target": "@components/fisher-ui/components/HoldToConfirmButton.tsx",
+        "path": "components/hold-to-confirm/HoldToConfirmButton.tsx",
+        "target": "@components/fisher-ui/hold-to-confirm/HoldToConfirmButton.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/UndoNotice.tsx",
-        "target": "@components/fisher-ui/components/UndoNotice.tsx",
+        "path": "components/hold-to-confirm/UndoNotice.tsx",
+        "target": "@components/fisher-ui/hold-to-confirm/UndoNotice.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/helpers/classname-helper.ts",
-        "target": "@components/fisher-ui/helpers/classname-helper.ts",
+        "path": "components/shared/classname-helper.ts",
+        "target": "@components/fisher-ui/shared/classname-helper.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -186,19 +178,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Appica",
-      "url": "@appica/ui-react/countdown"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/text/countdown.tsx",
-        "target": "@components/fisher-ui/components/text/countdown.tsx",
+        "path": "components/countdown/countdown.tsx",
+        "target": "@components/fisher-ui/countdown/countdown.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -214,14 +202,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Canvas UI",
-      "url": "https://canvasui.dev"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/canvasui/ParticleScroll.tsx",
-        "target": "@components/fisher-ui/components/canvasui/ParticleScroll.tsx",
+        "path": "components/particle-scroll/ParticleScroll.tsx",
+        "target": "@components/fisher-ui/particle-scroll/ParticleScroll.tsx",
         "type": "registry:component"
       }
     ]
@@ -254,19 +238,15 @@
         "muted-foreground": "oklch(0.705 0.015 286.067)"
       }
     },
-    "source": {
-      "name": "21st",
-      "url": "https://21st.dev/r/easemize/ai-chat-input"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/ui/ai-chat-input.tsx",
-        "target": "@components/fisher-ui/components/ui/ai-chat-input.tsx",
+        "path": "components/prompt-input/ai-chat-input.tsx",
+        "target": "@components/fisher-ui/prompt-input/ai-chat-input.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -286,19 +266,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/liquid-metal.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/liquid-metal/components/ui/liquid-metal.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/liquid-metal/components/ui/liquid-metal.tsx",
+        "path": "components/liquid-metal/liquid-metal.tsx",
+        "target": "@components/fisher-ui/liquid-metal/liquid-metal.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -318,19 +294,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/animated-button.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/animated-button/components/ui/animated-button.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/animated-button/components/ui/animated-button.tsx",
+        "path": "components/animated-button/animated-button.tsx",
+        "target": "@components/fisher-ui/animated-button/animated-button.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -350,19 +322,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/flip-fade-text.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/flip-fade-text/components/ui/flip-fade-text.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/flip-fade-text/components/ui/flip-fade-text.tsx",
+        "path": "components/flip-fade-text/flip-fade-text.tsx",
+        "target": "@components/fisher-ui/flip-fade-text/flip-fade-text.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -394,19 +362,15 @@
       ".prose ul,\n.prose ol": {},
       ".prose li": {}
     },
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/interactive-book.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/interactive-book/components/ui/interactive-book.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/interactive-book/components/ui/interactive-book.tsx",
+        "path": "components/interactive-book/interactive-book.tsx",
+        "target": "@components/fisher-ui/interactive-book/interactive-book.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -427,19 +391,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/perspective-carousel.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/perspective-carousel/components/ui/perspective-carousel.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/perspective-carousel/components/ui/perspective-carousel.tsx",
+        "path": "components/depth-carousel/perspective-carousel.tsx",
+        "target": "@components/fisher-ui/depth-carousel/perspective-carousel.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -460,19 +420,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/diagonal-carousel.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/diagonal-carousel/components/ui/diagonal-carousel.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/diagonal-carousel/components/ui/diagonal-carousel.tsx",
+        "path": "components/angled-carousel/diagonal-carousel.tsx",
+        "target": "@components/fisher-ui/angled-carousel/diagonal-carousel.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -495,19 +451,15 @@
       "@types/imagesloaded@^4.1.7",
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/staggered-grid.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/staggered-grid/components/ui/staggered-grid.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/staggered-grid/components/ui/staggered-grid.tsx",
+        "path": "components/staggered-grid/staggered-grid.tsx",
+        "target": "@components/fisher-ui/staggered-grid/staggered-grid.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -526,19 +478,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/kinetic-text-loader.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/kinetic-text-loader/components/ui/kinetic-text-loader.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/kinetic-text-loader/components/ui/kinetic-text-loader.tsx",
+        "path": "components/kinetic-text-loader/kinetic-text-loader.tsx",
+        "target": "@components/fisher-ui/kinetic-text-loader/kinetic-text-loader.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -564,19 +512,15 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/wave-grid-background.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/wave-grid-background/components/ui/wave-grid-background.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/wave-grid-background/components/ui/wave-grid-background.tsx",
+        "path": "components/wavefield-grid/wave-grid-background.tsx",
+        "target": "@components/fisher-ui/wavefield-grid/wave-grid-background.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -595,19 +539,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/aurora-hero.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/aurora-hero/components/ui/aurora-hero.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/aurora-hero/components/ui/aurora-hero.tsx",
+        "path": "components/aurora-horizon/aurora-hero.tsx",
+        "target": "@components/fisher-ui/aurora-horizon/aurora-hero.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -626,14 +566,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "React Bits",
-      "url": "@react-bits/SplitText-JS-CSS"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/splittext-js-css/SplitText/SplitText.jsx",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/splittext-js-css/SplitText/SplitText.jsx",
+        "path": "components/split-text/SplitText.jsx",
+        "target": "@components/fisher-ui/split-text/SplitText.jsx",
         "type": "registry:component"
       }
     ]
@@ -651,14 +587,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "React Bits",
-      "url": "@react-bits/BlurText-JS-CSS"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/blurtext-js-css/BlurText/BlurText.jsx",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/blurtext-js-css/BlurText/BlurText.jsx",
+        "path": "components/blur-text/BlurText.jsx",
+        "target": "@components/fisher-ui/blur-text/BlurText.jsx",
         "type": "registry:component"
       }
     ]
@@ -676,19 +608,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "React Bits",
-      "url": "@react-bits/TextType-JS-CSS"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.css",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.css",
+        "path": "components/text-type/TextType.css",
+        "target": "@components/fisher-ui/text-type/TextType.css",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.jsx",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.jsx",
+        "path": "components/text-type/TextType.jsx",
+        "target": "@components/fisher-ui/text-type/TextType.jsx",
         "type": "registry:component"
       }
     ]
@@ -706,19 +634,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "React Bits",
-      "url": "@react-bits/DomeGallery-JS-CSS"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.css",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.css",
+        "path": "components/dome-gallery/DomeGallery.css",
+        "target": "@components/fisher-ui/dome-gallery/DomeGallery.css",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.jsx",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.jsx",
+        "path": "components/dome-gallery/DomeGallery.jsx",
+        "target": "@components/fisher-ui/dome-gallery/DomeGallery.jsx",
         "type": "registry:component"
       }
     ]
@@ -736,19 +660,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "React Bits",
-      "url": "@react-bits/LightRays-JS-CSS"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.css",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.css",
+        "path": "components/luminous-rays/LightRays.css",
+        "target": "@components/fisher-ui/luminous-rays/LightRays.css",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.jsx",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.jsx",
+        "path": "components/luminous-rays/LightRays.jsx",
+        "target": "@components/fisher-ui/luminous-rays/LightRays.jsx",
         "type": "registry:component"
       }
     ]
@@ -769,19 +689,15 @@
       "@types/react@^19.2.7",
       "@types/three@^0.181.0"
     ],
-    "source": {
-      "name": "React Bits",
-      "url": "@react-bits/Beams-JS-CSS"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.css",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.css",
+        "path": "components/prismatic-beams/Beams.css",
+        "target": "@components/fisher-ui/prismatic-beams/Beams.css",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.jsx",
-        "target": "@components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.jsx",
+        "path": "components/prismatic-beams/Beams.jsx",
+        "target": "@components/fisher-ui/prismatic-beams/Beams.jsx",
         "type": "registry:component"
       }
     ]
@@ -805,54 +721,50 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Animate UI",
-      "url": "@animate-ui/components-animate-code"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/animate/code.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/animate/code.tsx",
+        "path": "components/code/code.tsx",
+        "target": "@components/fisher-ui/code/code.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/buttons/copy.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/buttons/copy.tsx",
+        "path": "components/code/copy.tsx",
+        "target": "@components/fisher-ui/code/copy.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/code-block.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/code-block.tsx",
+        "path": "components/code/code-block.tsx",
+        "target": "@components/fisher-ui/code/code-block.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/slot.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/slot.tsx",
+        "path": "components/code/slot.tsx",
+        "target": "@components/fisher-ui/code/slot.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/buttons/button.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/buttons/button.tsx",
+        "path": "components/code/button.tsx",
+        "target": "@components/fisher-ui/code/button.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-controlled-state.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-controlled-state.tsx",
+        "path": "components/code/use-controlled-state.tsx",
+        "target": "@components/fisher-ui/code/use-controlled-state.tsx",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-is-in-view.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-is-in-view.tsx",
+        "path": "components/code/use-is-in-view.tsx",
+        "target": "@components/fisher-ui/code/use-is-in-view.tsx",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/lib/get-strict-context.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/lib/get-strict-context.tsx",
+        "path": "components/code/get-strict-context.tsx",
+        "target": "@components/fisher-ui/code/get-strict-context.tsx",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -876,54 +788,50 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Animate UI",
-      "url": "@animate-ui/components-animate-code-tabs"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/animate/code-tabs.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/animate/code-tabs.tsx",
+        "path": "components/code-tabs/code-tabs.tsx",
+        "target": "@components/fisher-ui/code-tabs/code-tabs.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/buttons/copy.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/buttons/copy.tsx",
+        "path": "components/code-tabs/copy.tsx",
+        "target": "@components/fisher-ui/code-tabs/copy.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/slot.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/slot.tsx",
+        "path": "components/code-tabs/slot.tsx",
+        "target": "@components/fisher-ui/code-tabs/slot.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/tabs.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/tabs.tsx",
+        "path": "components/code-tabs/tabs.tsx",
+        "target": "@components/fisher-ui/code-tabs/tabs.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/buttons/button.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/buttons/button.tsx",
+        "path": "components/code-tabs/button.tsx",
+        "target": "@components/fisher-ui/code-tabs/button.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/effects/highlight.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/effects/highlight.tsx",
+        "path": "components/code-tabs/highlight.tsx",
+        "target": "@components/fisher-ui/code-tabs/highlight.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/hooks/use-controlled-state.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/hooks/use-controlled-state.tsx",
+        "path": "components/code-tabs/use-controlled-state.tsx",
+        "target": "@components/fisher-ui/code-tabs/use-controlled-state.tsx",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/lib/get-strict-context.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/lib/get-strict-context.tsx",
+        "path": "components/code-tabs/get-strict-context.tsx",
+        "target": "@components/fisher-ui/code-tabs/get-strict-context.tsx",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -956,44 +864,40 @@
         "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
       }
     },
-    "source": {
-      "name": "Animate UI",
-      "url": "@animate-ui/components-radix-files"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/components/radix/files.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/components/radix/files.tsx",
+        "path": "components/files/components-radix-files.tsx",
+        "target": "@components/fisher-ui/files/components-radix-files.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/effects/highlight.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/effects/highlight.tsx",
+        "path": "components/files/highlight.tsx",
+        "target": "@components/fisher-ui/files/highlight.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/accordion.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/accordion.tsx",
+        "path": "components/files/accordion.tsx",
+        "target": "@components/fisher-ui/files/accordion.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/files.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/files.tsx",
+        "path": "components/files/primitives-radix-files.tsx",
+        "target": "@components/fisher-ui/files/primitives-radix-files.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/hooks/use-controlled-state.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/hooks/use-controlled-state.tsx",
+        "path": "components/files/use-controlled-state.tsx",
+        "target": "@components/fisher-ui/files/use-controlled-state.tsx",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/lib/get-strict-context.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/lib/get-strict-context.tsx",
+        "path": "components/files/get-strict-context.tsx",
+        "target": "@components/fisher-ui/files/get-strict-context.tsx",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1012,19 +916,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Animate UI",
-      "url": "@animate-ui/components-backgrounds-hexagon"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-backgrounds-hexagon/components/animate-ui/components/backgrounds/hexagon.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-backgrounds-hexagon/components/animate-ui/components/backgrounds/hexagon.tsx",
+        "path": "components/hexagonal-field/hexagon.tsx",
+        "target": "@components/fisher-ui/hexagonal-field/hexagon.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1043,14 +943,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Animate UI",
-      "url": "@animate-ui/components-community-notification-list"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-community-notification-list/components/animate-ui/components/community/notification-list.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-community-notification-list/components/animate-ui/components/community/notification-list.tsx",
+        "path": "components/notification-list/notification-list.tsx",
+        "target": "@components/fisher-ui/notification-list/notification-list.tsx",
         "type": "registry:component"
       }
     ]
@@ -1084,19 +980,15 @@
         "accent": "oklch(0.274 0.006 286.033)"
       }
     },
-    "source": {
-      "name": "Unlumen UI",
-      "url": "@unlumen-ui/apple-switch"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/unlumen-ui/apple-switch/components/unlumen-ui/apple-switch.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/unlumen-ui/apple-switch/components/unlumen-ui/apple-switch.tsx",
+        "path": "components/apple-switch/apple-switch.tsx",
+        "target": "@components/fisher-ui/apple-switch/apple-switch.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1112,14 +1004,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/integrations-2.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/integrations-2/components/ui/integrations-2.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/integrations-2/components/ui/integrations-2.tsx",
+        "path": "components/integrations-2/integrations-2.tsx",
+        "target": "@components/fisher-ui/integrations-2/integrations-2.tsx",
         "type": "registry:component"
       }
     ]
@@ -1138,14 +1026,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/knob-slider.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/knob-slider/components/ui/knob-slider.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/knob-slider/components/ui/knob-slider.tsx",
+        "path": "components/knob-slider/knob-slider.tsx",
+        "target": "@components/fisher-ui/knob-slider/knob-slider.tsx",
         "type": "registry:component"
       }
     ]
@@ -1169,14 +1053,10 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/frequency-selector.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/frequency-selector/components/ui/frequency-selector.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/frequency-selector/components/ui/frequency-selector.tsx",
+        "path": "components/frequency-picker/frequency-selector.tsx",
+        "target": "@components/fisher-ui/frequency-picker/frequency-selector.tsx",
         "type": "registry:component"
       }
     ]
@@ -1195,14 +1075,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/calendar-widget.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/calendar-widget/components/ui/calendar-widget.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/calendar-widget/components/ui/calendar-widget.tsx",
+        "path": "components/calendar-widget/calendar-widget.tsx",
+        "target": "@components/fisher-ui/calendar-widget/calendar-widget.tsx",
         "type": "registry:component"
       }
     ]
@@ -1220,14 +1096,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/range-selection-slider.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/range-selection-slider/components/ui/range-selection-slider.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/range-selection-slider/components/ui/range-selection-slider.tsx",
+        "path": "components/range-selection-slider/range-selection-slider.tsx",
+        "target": "@components/fisher-ui/range-selection-slider/range-selection-slider.tsx",
         "type": "registry:component"
       }
     ]
@@ -1247,14 +1119,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/pricing-widget.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/pricing-widget/components/ui/pricing-widget.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/pricing-widget/components/ui/pricing-widget.tsx",
+        "path": "components/pricing-widget/pricing-widget.tsx",
+        "target": "@components/fisher-ui/pricing-widget/pricing-widget.tsx",
         "type": "registry:component"
       }
     ]
@@ -1273,14 +1141,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/swap-currency-card.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/swap-currency-card/components/ui/swap-currency-card.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/swap-currency-card/components/ui/swap-currency-card.tsx",
+        "path": "components/swap-currency-card/swap-currency-card.tsx",
+        "target": "@components/fisher-ui/swap-currency-card/swap-currency-card.tsx",
         "type": "registry:component"
       }
     ]
@@ -1302,14 +1166,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/show-qr.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/show-qr/components/ui/show-qr.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/show-qr/components/ui/show-qr.tsx",
+        "path": "components/show-qr/show-qr.tsx",
+        "target": "@components/fisher-ui/show-qr/show-qr.tsx",
         "type": "registry:component"
       }
     ]
@@ -1328,14 +1188,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/weight-widget.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/weight-widget/components/ui/weight-widget.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/weight-widget/components/ui/weight-widget.tsx",
+        "path": "components/weight-widget/weight-widget.tsx",
+        "target": "@components/fisher-ui/weight-widget/weight-widget.tsx",
         "type": "registry:component"
       }
     ]
@@ -1355,14 +1211,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/waveform-scrub.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/waveform-scrub/components/ui/waveform-scrub.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/waveform-scrub/components/ui/waveform-scrub.tsx",
+        "path": "components/audio-scrubber/waveform-scrub.tsx",
+        "target": "@components/fisher-ui/audio-scrubber/waveform-scrub.tsx",
         "type": "registry:component"
       }
     ]
@@ -1381,14 +1233,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/tags.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/tags/components/ui/tags.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/tags/components/ui/tags.tsx",
+        "path": "components/tags/tags.tsx",
+        "target": "@components/fisher-ui/tags/tags.tsx",
         "type": "registry:component"
       }
     ]
@@ -1412,19 +1260,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/draw-signature.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/draw-signature/components/ui/draw-signature.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/draw-signature/components/ui/draw-signature.tsx",
+        "path": "components/draw-signature/draw-signature.tsx",
+        "target": "@components/fisher-ui/draw-signature/draw-signature.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1445,19 +1289,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/inline-action.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/inline-action/components/ui/inline-action.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/inline-action/components/ui/inline-action.tsx",
+        "path": "components/inline-update/inline-action.tsx",
+        "target": "@components/fisher-ui/inline-update/inline-action.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1476,14 +1316,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/inline-toast.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/inline-toast/components/ui/inline-toast.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/inline-toast/components/ui/inline-toast.tsx",
+        "path": "components/inline-copy/inline-toast.tsx",
+        "target": "@components/fisher-ui/inline-copy/inline-toast.tsx",
         "type": "registry:component"
       }
     ]
@@ -1501,14 +1337,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/licence-key.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/licence-key/components/ui/license-key.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/licence-key/components/ui/license-key.tsx",
+        "path": "components/license-key/license-key.tsx",
+        "target": "@components/fisher-ui/license-key/license-key.tsx",
         "type": "registry:component"
       }
     ]
@@ -1536,19 +1368,15 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/scroll-island.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/scroll-island/components/ui/scroll-island.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/scroll-island/components/ui/scroll-island.tsx",
+        "path": "components/scroll-island/scroll-island.tsx",
+        "target": "@components/fisher-ui/scroll-island/scroll-island.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1580,14 +1408,10 @@
         "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
       }
     },
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/voice-note.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/voice-note/components/ui/voice-note.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/voice-note/components/ui/voice-note.tsx",
+        "path": "components/voice-note/voice-note.tsx",
+        "target": "@components/fisher-ui/voice-note/voice-note.tsx",
         "type": "registry:component"
       }
     ]
@@ -1606,14 +1430,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/transaction-list.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/transaction-list/components/ui/transaction-list.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/transaction-list/components/ui/transaction-list.tsx",
+        "path": "components/transaction-list/transaction-list.tsx",
+        "target": "@components/fisher-ui/transaction-list/transaction-list.tsx",
         "type": "registry:component"
       }
     ]
@@ -1634,19 +1454,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/feedback-action.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/feedback-action/components/ui/feedback-action.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/feedback-action/components/ui/feedback-action.tsx",
+        "path": "components/feedback-action/feedback-action.tsx",
+        "target": "@components/fisher-ui/feedback-action/feedback-action.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1671,14 +1487,10 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Watermelon",
-      "url": "https://registry.watermelon.sh/r/event-reminders.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/watermelon/event-reminders/components/ui/event-reminders.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/watermelon/event-reminders/components/ui/event-reminders.tsx",
+        "path": "components/event-reminders/event-reminders.tsx",
+        "target": "@components/fisher-ui/event-reminders/event-reminders.tsx",
         "type": "registry:component"
       }
     ]
@@ -1698,19 +1510,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/music-player"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/music-player/components/ui/music-player.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/music-player/components/ui/music-player.tsx",
+        "path": "components/compact-music-player/music-player.tsx",
+        "target": "@components/fisher-ui/compact-music-player/music-player.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1728,14 +1536,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Sahil Codex",
-      "url": "https://sahilcodex.vercel.app/r/music-player.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/ui/music-player.tsx",
-        "target": "@components/fisher-ui/components/ui/music-player.tsx",
+        "path": "components/music-player-2/music-player.tsx",
+        "target": "@components/fisher-ui/music-player-2/music-player.tsx",
         "type": "registry:component"
       }
     ]
@@ -1755,19 +1559,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Vengence UI",
-      "url": "https://www.vengenceui.com/r/music-player.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/music-player/components/ui/music-player.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/music-player/components/ui/music-player.tsx",
+        "path": "components/music-player-3/music-player.tsx",
+        "target": "@components/fisher-ui/music-player-3/music-player.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1787,19 +1587,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/scroll-split-card"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/scroll-split-card/components/ui/scroll-split-card.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/scroll-split-card/components/ui/scroll-split-card.tsx",
+        "path": "components/scroll-split-card/scroll-split-card.tsx",
+        "target": "@components/fisher-ui/scroll-split-card/scroll-split-card.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1824,19 +1620,15 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/mac-keyboard"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/mac-keyboard/components/ui/mac-keyboard.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/mac-keyboard/components/ui/mac-keyboard.tsx",
+        "path": "components/mac-keyboard/mac-keyboard.tsx",
+        "target": "@components/fisher-ui/mac-keyboard/mac-keyboard.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1857,24 +1649,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Aceternity UI",
-      "url": "@aceternity/keyboard-demo"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/keyboard-demo.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/keyboard-demo.tsx",
+        "path": "components/mac-keyboard-2/keyboard-demo.tsx",
+        "target": "@components/fisher-ui/mac-keyboard-2/keyboard-demo.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/ui/keyboard.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/ui/keyboard.tsx",
+        "path": "components/mac-keyboard-2/keyboard.tsx",
+        "target": "@components/fisher-ui/mac-keyboard-2/keyboard.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1895,19 +1683,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Sahil Codex",
-      "url": "https://sahilcodex.vercel.app/r/keyboard.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/ui/keyboard.tsx",
-        "target": "@components/fisher-ui/components/ui/keyboard.tsx",
+        "path": "components/mac-keyboard-3/keyboard.tsx",
+        "target": "@components/fisher-ui/mac-keyboard-3/keyboard.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1927,19 +1711,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/magnetic-dock"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/magnetic-dock/components/ui/magnetic-dock.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/magnetic-dock/components/ui/magnetic-dock.tsx",
+        "path": "components/magnetic-dock/magnetic-dock.tsx",
+        "target": "@components/fisher-ui/magnetic-dock/magnetic-dock.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1960,19 +1740,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/scroll-tilted-grid"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/scroll-tilted-grid/components/ui/scroll-tilted-grid.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/scroll-tilted-grid/components/ui/scroll-tilted-grid.tsx",
+        "path": "components/scroll-tilted-grid/scroll-tilted-grid.tsx",
+        "target": "@components/fisher-ui/scroll-tilted-grid/scroll-tilted-grid.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -1992,19 +1768,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/eye-tracking"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/eye-tracking/components/ui/eye-tracking.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/eye-tracking/components/ui/eye-tracking.tsx",
+        "path": "components/eye-tracking/eye-tracking.tsx",
+        "target": "@components/fisher-ui/eye-tracking/eye-tracking.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2025,19 +1797,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/orbit-card-stack"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/orbit-card-stack/components/ui/orbit-card-stack.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/orbit-card-stack/components/ui/orbit-card-stack.tsx",
+        "path": "components/card-stack/orbit-card-stack.tsx",
+        "target": "@components/fisher-ui/card-stack/orbit-card-stack.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2061,19 +1829,15 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Componentry",
-      "url": "@componentry/liquid-chrome"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/componentry/liquid-chrome/components/ui/liquid-chrome.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/componentry/liquid-chrome/components/ui/liquid-chrome.tsx",
+        "path": "components/liquid-mirror/liquid-chrome.tsx",
+        "target": "@components/fisher-ui/liquid-mirror/liquid-chrome.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2092,19 +1856,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Aceternity UI",
-      "url": "@aceternity/animated-testimonials-demo"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/animated-testimonials-demo.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/animated-testimonials-demo.tsx",
+        "path": "components/testimonial-stories/animated-testimonials-demo.tsx",
+        "target": "@components/fisher-ui/testimonial-stories/animated-testimonials-demo.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/ui/animated-testimonials.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/ui/animated-testimonials.tsx",
+        "path": "components/testimonial-stories/animated-testimonials.tsx",
+        "target": "@components/fisher-ui/testimonial-stories/animated-testimonials.tsx",
         "type": "registry:component"
       }
     ]
@@ -2134,24 +1894,20 @@
         "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
       }
     },
-    "source": {
-      "name": "Aceternity UI",
-      "url": "@aceternity/terminal-demo"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/terminal-demo.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/terminal-demo.tsx",
+        "path": "components/terminal/terminal-demo.tsx",
+        "target": "@components/fisher-ui/terminal/terminal-demo.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/ui/terminal.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/ui/terminal.tsx",
+        "path": "components/terminal/terminal.tsx",
+        "target": "@components/fisher-ui/terminal/terminal.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2174,24 +1930,20 @@
       "@types/react@^19.2.7",
       "@types/three@^0.181.0"
     ],
-    "source": {
-      "name": "Aceternity UI",
-      "url": "@aceternity/3d-globe-demo"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/3d-globe-demo.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/3d-globe-demo.tsx",
+        "path": "components/3-d-globe/3d-globe-demo.tsx",
+        "target": "@components/fisher-ui/3-d-globe/3d-globe-demo.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/ui/3d-globe.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/ui/3d-globe.tsx",
+        "path": "components/3-d-globe/3d-globe.tsx",
+        "target": "@components/fisher-ui/3-d-globe/3d-globe.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2215,29 +1967,25 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Aceternity UI",
-      "url": "@aceternity/compare-demo"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/compare-demo.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/compare-demo.tsx",
+        "path": "components/compare/compare-demo.tsx",
+        "target": "@components/fisher-ui/compare/compare-demo.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/compare.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/compare.tsx",
+        "path": "components/compare/compare.tsx",
+        "target": "@components/fisher-ui/compare/compare.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/sparkles.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/sparkles.tsx",
+        "path": "components/compare/sparkles.tsx",
+        "target": "@components/fisher-ui/compare/sparkles.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2257,24 +2005,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Aceternity UI",
-      "url": "@aceternity/lens-demo"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/lens-demo.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/lens-demo.tsx",
+        "path": "components/focus-lens/lens-demo.tsx",
+        "target": "@components/fisher-ui/focus-lens/lens-demo.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/ui/lens.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/ui/lens.tsx",
+        "path": "components/focus-lens/lens.tsx",
+        "target": "@components/fisher-ui/focus-lens/lens.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2294,19 +2038,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "UI Tripled",
-      "url": "@uitripled/cash-flow-chart"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/uitripled/cash-flow-chart/components/uitripled/cash-flow-chart-carbon.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/uitripled/cash-flow-chart/components/uitripled/cash-flow-chart-carbon.tsx",
+        "path": "components/cash-flow-chart/cash-flow-chart-carbon.tsx",
+        "target": "@components/fisher-ui/cash-flow-chart/cash-flow-chart-carbon.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2341,39 +2081,35 @@
         "secondary": "var(--color-neutral-300)"
       }
     },
-    "source": {
-      "name": "UI Tripled",
-      "url": "@uitripled/wizard-form-shadcnui"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/uitripled/wizard-form-shadcnui/components/uitripled/wizard-form-shadcnui.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/uitripled/wizard-form-shadcnui/components/uitripled/wizard-form-shadcnui.tsx",
+        "path": "components/wizard-form/wizard-form-shadcnui.tsx",
+        "target": "@components/fisher-ui/wizard-form/wizard-form-shadcnui.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/ui/badge.tsx",
-        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "path": "components/shared/badge.tsx",
+        "target": "@components/fisher-ui/shared/badge.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/ui/button.tsx",
-        "target": "@components/fisher-ui/components/ui/button.tsx",
+        "path": "components/wizard-form/button.tsx",
+        "target": "@components/fisher-ui/wizard-form/button.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/ui/input.tsx",
-        "target": "@components/fisher-ui/components/ui/input.tsx",
+        "path": "components/wizard-form/input.tsx",
+        "target": "@components/fisher-ui/wizard-form/input.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/ui/label.tsx",
-        "target": "@components/fisher-ui/components/ui/label.tsx",
+        "path": "components/wizard-form/label.tsx",
+        "target": "@components/fisher-ui/wizard-form/label.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2396,29 +2132,25 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "UI Tripled",
-      "url": "@uitripled/conference-ticket-shadcnui"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/uitripled/conference-ticket-shadcnui/components/uitripled/conference-ticket-shadcnui.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/uitripled/conference-ticket-shadcnui/components/uitripled/conference-ticket-shadcnui.tsx",
+        "path": "components/conference-ticket/conference-ticket-shadcnui.tsx",
+        "target": "@components/fisher-ui/conference-ticket/conference-ticket-shadcnui.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/ui/avatar.tsx",
-        "target": "@components/fisher-ui/components/ui/avatar.tsx",
+        "path": "components/conference-ticket/avatar.tsx",
+        "target": "@components/fisher-ui/conference-ticket/avatar.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/ui/badge.tsx",
-        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "path": "components/shared/badge.tsx",
+        "target": "@components/fisher-ui/shared/badge.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2441,24 +2173,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "UI Tripled",
-      "url": "@uitripled/theater-ticket-shadcnui"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/uitripled/theater-ticket-shadcnui/components/uitripled/theater-ticket-shadcnui.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/uitripled/theater-ticket-shadcnui/components/uitripled/theater-ticket-shadcnui.tsx",
+        "path": "components/theater-ticket/theater-ticket-shadcnui.tsx",
+        "target": "@components/fisher-ui/theater-ticket/theater-ticket-shadcnui.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/ui/badge.tsx",
-        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "path": "components/shared/badge.tsx",
+        "target": "@components/fisher-ui/shared/badge.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2481,24 +2209,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "UI Tripled",
-      "url": "@uitripled/cinema-ticket-shadcnui"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/uitripled/cinema-ticket-shadcnui/components/uitripled/cinema-ticket-shadcnui.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/uitripled/cinema-ticket-shadcnui/components/uitripled/cinema-ticket-shadcnui.tsx",
+        "path": "components/cinema-ticket/cinema-ticket-shadcnui.tsx",
+        "target": "@components/fisher-ui/cinema-ticket/cinema-ticket-shadcnui.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/ui/badge.tsx",
-        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "path": "components/shared/badge.tsx",
+        "target": "@components/fisher-ui/shared/badge.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2518,29 +2242,25 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/range-slider"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/range-slider.tsx",
-        "target": "@components/fisher-ui/components/motion/range-slider.tsx",
+        "path": "components/range-slider/range-slider.tsx",
+        "target": "@components/fisher-ui/range-slider/range-slider.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-slider.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-slider.ts",
+        "path": "components/range-slider/use-slider.ts",
+        "target": "@components/fisher-ui/range-slider/use-slider.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2560,24 +2280,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/wheel-picker"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/wheel-picker.tsx",
-        "target": "@components/fisher-ui/components/motion/wheel-picker.tsx",
+        "path": "components/wheel-picker/wheel-picker.tsx",
+        "target": "@components/fisher-ui/wheel-picker/wheel-picker.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/tick-sound.ts",
-        "target": "@components/fisher-ui/lib/tick-sound.ts",
+        "path": "components/wheel-picker/tick-sound.ts",
+        "target": "@components/fisher-ui/wheel-picker/tick-sound.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2599,49 +2315,45 @@
       "@types/react-dom@^19.2.3",
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/prompt-input"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/prompt-input.tsx",
-        "target": "@components/fisher-ui/components/agents/prompt-input.tsx",
+        "path": "components/prompt-input-2/prompt-input.tsx",
+        "target": "@components/fisher-ui/prompt-input-2/prompt-input.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/button/base.tsx",
-        "target": "@components/fisher-ui/components/motion/button/base.tsx",
+        "path": "components/shared/base.tsx",
+        "target": "@components/fisher-ui/shared/base.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/popover-morph.tsx",
-        "target": "@components/fisher-ui/components/motion/popover-morph.tsx",
+        "path": "components/prompt-input-2/popover-morph.tsx",
+        "target": "@components/fisher-ui/prompt-input-2/popover-morph.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/popover-position.ts",
-        "target": "@components/fisher-ui/components/motion/popover-position.ts",
+        "path": "components/prompt-input-2/popover-position.ts",
+        "target": "@components/fisher-ui/prompt-input-2/popover-position.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/components/motion/select.tsx",
-        "target": "@components/fisher-ui/components/motion/select.tsx",
+        "path": "components/prompt-input-2/select.tsx",
+        "target": "@components/fisher-ui/prompt-input-2/select.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "path": "components/shared/use-hover-capable.ts",
+        "target": "@components/fisher-ui/shared/use-hover-capable.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2667,39 +2379,35 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/todo-list"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/todo-list.tsx",
-        "target": "@components/fisher-ui/components/agents/todo-list.tsx",
+        "path": "components/todo-list/todo-list.tsx",
+        "target": "@components/fisher-ui/todo-list/todo-list.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "path": "components/shared/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/shared/action-swap-roll.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "path": "components/shared/action-swap.tsx",
+        "target": "@components/fisher-ui/shared/action-swap.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2721,29 +2429,25 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/code-block"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-code.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "path": "components/shared/agent-code.tsx",
+        "target": "@components/fisher-ui/shared/agent-code.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/code-block.tsx",
-        "target": "@components/fisher-ui/components/agents/code-block.tsx",
+        "path": "components/code-block/code-block.tsx",
+        "target": "@components/fisher-ui/code-block/code-block.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2769,69 +2473,65 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/approval-card"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/approval-card/index.tsx",
-        "target": "@components/fisher-ui/components/agents/approval-card/index.tsx",
+        "path": "components/approval-card/index.tsx",
+        "target": "@components/fisher-ui/approval-card/index.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/approval-card/types.ts",
-        "target": "@components/fisher-ui/components/agents/approval-card/types.ts",
+        "path": "components/approval-card/types.ts",
+        "target": "@components/fisher-ui/approval-card/types.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "path": "components/shared/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/shared/action-swap-roll.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "path": "components/shared/action-swap.tsx",
+        "target": "@components/fisher-ui/shared/action-swap.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/button/base.tsx",
-        "target": "@components/fisher-ui/components/motion/button/base.tsx",
+        "path": "components/shared/base.tsx",
+        "target": "@components/fisher-ui/shared/base.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/checkbox.tsx",
-        "target": "@components/fisher-ui/components/motion/checkbox.tsx",
+        "path": "components/shared/checkbox.tsx",
+        "target": "@components/fisher-ui/shared/checkbox.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/input.tsx",
-        "target": "@components/fisher-ui/components/motion/input.tsx",
+        "path": "components/approval-card/input.tsx",
+        "target": "@components/fisher-ui/approval-card/input.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/radio.tsx",
-        "target": "@components/fisher-ui/components/motion/radio.tsx",
+        "path": "components/approval-card/radio.tsx",
+        "target": "@components/fisher-ui/approval-card/radio.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "path": "components/shared/use-hover-capable.ts",
+        "target": "@components/fisher-ui/shared/use-hover-capable.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2858,49 +2558,45 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/file-diff"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-code.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "path": "components/shared/agent-code.tsx",
+        "target": "@components/fisher-ui/shared/agent-code.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/file-diff.tsx",
-        "target": "@components/fisher-ui/components/agents/file-diff.tsx",
+        "path": "components/file-diff/file-diff.tsx",
+        "target": "@components/fisher-ui/file-diff/file-diff.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/tool-result.tsx",
-        "target": "@components/fisher-ui/components/agents/tool-result.tsx",
+        "path": "components/shared/tool-result.tsx",
+        "target": "@components/fisher-ui/shared/tool-result.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "path": "components/shared/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/shared/action-swap-roll.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "path": "components/shared/action-swap.tsx",
+        "target": "@components/fisher-ui/shared/action-swap.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2927,44 +2623,40 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/tool-result"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-code.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "path": "components/shared/agent-code.tsx",
+        "target": "@components/fisher-ui/shared/agent-code.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/tool-result.tsx",
-        "target": "@components/fisher-ui/components/agents/tool-result.tsx",
+        "path": "components/shared/tool-result.tsx",
+        "target": "@components/fisher-ui/shared/tool-result.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "path": "components/shared/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/shared/action-swap-roll.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/action-swap.tsx",
-        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "path": "components/shared/action-swap.tsx",
+        "target": "@components/fisher-ui/shared/action-swap.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -2985,39 +2677,35 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/streaming-response"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/citations.tsx",
-        "target": "@components/fisher-ui/components/agents/citations.tsx",
+        "path": "components/shared/citations.tsx",
+        "target": "@components/fisher-ui/shared/citations.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/streaming-response.tsx",
-        "target": "@components/fisher-ui/components/agents/streaming-response.tsx",
+        "path": "components/streaming-response/streaming-response.tsx",
+        "target": "@components/fisher-ui/streaming-response/streaming-response.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/favicon.ts",
-        "target": "@components/fisher-ui/lib/favicon.ts",
+        "path": "components/shared/favicon.ts",
+        "target": "@components/fisher-ui/shared/favicon.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3043,29 +2731,25 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/image-generation"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/image-generation.tsx",
-        "target": "@components/fisher-ui/components/agents/image-generation.tsx",
+        "path": "components/image-generation/image-generation.tsx",
+        "target": "@components/fisher-ui/image-generation/image-generation.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "path": "components/shared/use-hover-capable.ts",
+        "target": "@components/fisher-ui/shared/use-hover-capable.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3085,19 +2769,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Rare UI",
-      "url": "https://www.rareui.com/components/gridreveal"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/ui/grid-reveal.tsx",
-        "target": "@components/fisher-ui/components/ui/grid-reveal.tsx",
+        "path": "components/image-generation-2/grid-reveal.tsx",
+        "target": "@components/fisher-ui/image-generation-2/grid-reveal.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3119,34 +2799,30 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/tool-approval"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-code.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "path": "components/shared/agent-code.tsx",
+        "target": "@components/fisher-ui/shared/agent-code.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/tool-approval.tsx",
-        "target": "@components/fisher-ui/components/agents/tool-approval.tsx",
+        "path": "components/tool-approval/tool-approval.tsx",
+        "target": "@components/fisher-ui/tool-approval/tool-approval.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3167,34 +2843,30 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/citations"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/citations.tsx",
-        "target": "@components/fisher-ui/components/agents/citations.tsx",
+        "path": "components/shared/citations.tsx",
+        "target": "@components/fisher-ui/shared/citations.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/favicon.ts",
-        "target": "@components/fisher-ui/lib/favicon.ts",
+        "path": "components/shared/favicon.ts",
+        "target": "@components/fisher-ui/shared/favicon.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3227,54 +2899,50 @@
         "muted-foreground": "oklch(0.705 0.015 286.067)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/agent-activity"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-activity/activity-row.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-activity/activity-row.tsx",
+        "path": "components/agent-activity/activity-row.tsx",
+        "target": "@components/fisher-ui/agent-activity/activity-row.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/agent-activity/index.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-activity/index.tsx",
+        "path": "components/agent-activity/index.tsx",
+        "target": "@components/fisher-ui/agent-activity/index.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/agent-activity/types.ts",
-        "target": "@components/fisher-ui/components/agents/agent-activity/types.ts",
+        "path": "components/agent-activity/types.ts",
+        "target": "@components/fisher-ui/agent-activity/types.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "path": "components/shared/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/shared/agent-disclosure.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
-        "target": "@components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
+        "path": "components/shared/thinking-shimmer.tsx",
+        "target": "@components/fisher-ui/shared/thinking-shimmer.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/text-shimmer.tsx",
-        "target": "@components/fisher-ui/components/motion/text-shimmer.tsx",
+        "path": "components/shared/text-shimmer.tsx",
+        "target": "@components/fisher-ui/shared/text-shimmer.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/text-shimmer-styles.ts",
-        "target": "@components/fisher-ui/lib/text-shimmer-styles.ts",
+        "path": "components/shared/text-shimmer-styles.ts",
+        "target": "@components/fisher-ui/shared/text-shimmer-styles.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3311,34 +2979,30 @@
         "muted-foreground": "oklch(0.705 0.015 286.067)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/agent-activity-2"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/agent-activity-2.tsx",
-        "target": "@components/fisher-ui/components/agents/agent-activity-2.tsx",
+        "path": "components/agent-activity-2/agent-activity-2.tsx",
+        "target": "@components/fisher-ui/agent-activity-2/agent-activity-2.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
-        "target": "@components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
+        "path": "components/shared/thinking-shimmer.tsx",
+        "target": "@components/fisher-ui/shared/thinking-shimmer.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/text-shimmer.tsx",
-        "target": "@components/fisher-ui/components/motion/text-shimmer.tsx",
+        "path": "components/shared/text-shimmer.tsx",
+        "target": "@components/fisher-ui/shared/text-shimmer.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/text-shimmer-styles.ts",
-        "target": "@components/fisher-ui/lib/text-shimmer-styles.ts",
+        "path": "components/shared/text-shimmer-styles.ts",
+        "target": "@components/fisher-ui/shared/text-shimmer-styles.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3373,34 +3037,30 @@
         "muted-foreground": "oklch(0.705 0.015 286.067)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/reasoning-text"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/loading-states/reasoning-text.tsx",
-        "target": "@components/fisher-ui/components/agents/loading-states/reasoning-text.tsx",
+        "path": "components/reasoning-text/reasoning-text.tsx",
+        "target": "@components/fisher-ui/reasoning-text/reasoning-text.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/loader.tsx",
-        "target": "@components/fisher-ui/components/motion/loader.tsx",
+        "path": "components/reasoning-text/loader.tsx",
+        "target": "@components/fisher-ui/reasoning-text/loader.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/text-shimmer-styles.ts",
-        "target": "@components/fisher-ui/lib/text-shimmer-styles.ts",
+        "path": "components/shared/text-shimmer-styles.ts",
+        "target": "@components/fisher-ui/shared/text-shimmer-styles.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3431,24 +3091,20 @@
         "muted-foreground": "oklch(0.705 0.015 286.067)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/loading-states"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/loading-states/loading-state.module.css",
-        "target": "@components/fisher-ui/components/agents/loading-states/loading-state.module.css",
+        "path": "components/loading-states/loading-state.module.css",
+        "target": "@components/fisher-ui/loading-states/loading-state.module.css",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/agents/loading-states/loading-state.tsx",
-        "target": "@components/fisher-ui/components/agents/loading-states/loading-state.tsx",
+        "path": "components/loading-states/loading-state.tsx",
+        "target": "@components/fisher-ui/loading-states/loading-state.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3474,19 +3130,15 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/selection-actions"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/selection-actions.tsx",
-        "target": "@components/fisher-ui/components/agents/selection-actions.tsx",
+        "path": "components/selection-actions/selection-actions.tsx",
+        "target": "@components/fisher-ui/selection-actions/selection-actions.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3506,19 +3158,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/recommendation-card"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/recommendation-card.tsx",
-        "target": "@components/fisher-ui/components/agents/recommendation-card.tsx",
+        "path": "components/recommendation-card/recommendation-card.tsx",
+        "target": "@components/fisher-ui/recommendation-card/recommendation-card.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3549,19 +3197,15 @@
         "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/task-rows"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/task-rows.tsx",
-        "target": "@components/fisher-ui/components/agents/task-rows.tsx",
+        "path": "components/task-rows/task-rows.tsx",
+        "target": "@components/fisher-ui/task-rows/task-rows.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3582,89 +3226,85 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Thinking Orbs",
-      "url": "https://github.com/Jakubantalik/thinking-orbs"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/braid.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/braid.ts",
+        "path": "components/thinking-orbs/braid.ts",
+        "target": "@components/fisher-ui/thinking-orbs/braid.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/core.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/core.ts",
+        "path": "components/thinking-orbs/core.ts",
+        "target": "@components/fisher-ui/thinking-orbs/core.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/lattice.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/lattice.ts",
+        "path": "components/thinking-orbs/lattice.ts",
+        "target": "@components/fisher-ui/thinking-orbs/lattice.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/morph.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/morph.ts",
+        "path": "components/thinking-orbs/morph.ts",
+        "target": "@components/fisher-ui/thinking-orbs/morph.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/orbits.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/orbits.ts",
+        "path": "components/thinking-orbs/orbits.ts",
+        "target": "@components/fisher-ui/thinking-orbs/orbits.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/profiles.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/profiles.ts",
+        "path": "components/thinking-orbs/profiles.ts",
+        "target": "@components/fisher-ui/thinking-orbs/profiles.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/registry.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/registry.ts",
+        "path": "components/thinking-orbs/registry.ts",
+        "target": "@components/fisher-ui/thinking-orbs/registry.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/ribbon.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/ribbon.ts",
+        "path": "components/thinking-orbs/ribbon.ts",
+        "target": "@components/fisher-ui/thinking-orbs/ribbon.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/types.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/types.ts",
+        "path": "components/thinking-orbs/engine-types.ts",
+        "target": "@components/fisher-ui/thinking-orbs/engine-types.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/web.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/web.ts",
+        "path": "components/thinking-orbs/web.ts",
+        "target": "@components/fisher-ui/thinking-orbs/web.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/index.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/index.ts",
+        "path": "components/thinking-orbs/index.ts",
+        "target": "@components/fisher-ui/thinking-orbs/index.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/LICENSE.md",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/LICENSE.md",
+        "path": "components/thinking-orbs/LICENSE.md",
+        "target": "@components/fisher-ui/thinking-orbs/LICENSE.md",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/presets.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/presets.ts",
+        "path": "components/thinking-orbs/presets.ts",
+        "target": "@components/fisher-ui/thinking-orbs/presets.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/theme.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/theme.ts",
+        "path": "components/thinking-orbs/theme.ts",
+        "target": "@components/fisher-ui/thinking-orbs/theme.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/ThinkingOrb.tsx",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/ThinkingOrb.tsx",
+        "path": "components/thinking-orbs/ThinkingOrb.tsx",
+        "target": "@components/fisher-ui/thinking-orbs/ThinkingOrb.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/thinking-orbs/types.ts",
-        "target": "@components/fisher-ui/components/agents/thinking-orbs/types.ts",
+        "path": "components/thinking-orbs/thinking-orbs-types.ts",
+        "target": "@components/fisher-ui/thinking-orbs/thinking-orbs-types.ts",
         "type": "registry:component"
       }
     ]
@@ -3696,24 +3336,20 @@
         "border": "oklch(0.274 0.006 286.033)"
       }
     },
-    "source": {
-      "name": "Satisfy UI",
-      "url": "local"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/agents/structured-output/DataTable.module.css",
-        "target": "@components/fisher-ui/components/agents/structured-output/DataTable.module.css",
+        "path": "components/structured-output/DataTable.module.css",
+        "target": "@components/fisher-ui/structured-output/DataTable.module.css",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/components/agents/structured-output/DataTable.tsx",
-        "target": "@components/fisher-ui/components/agents/structured-output/DataTable.tsx",
+        "path": "components/structured-output/DataTable.tsx",
+        "target": "@components/fisher-ui/structured-output/DataTable.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/agents/structured-output/index.ts",
-        "target": "@components/fisher-ui/components/agents/structured-output/index.ts",
+        "path": "components/structured-output/index.ts",
+        "target": "@components/fisher-ui/structured-output/index.ts",
         "type": "registry:component"
       }
     ]
@@ -3735,24 +3371,20 @@
       "@types/react-dom@^19.2.3",
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/morphing-tabs"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/morphing-tabs.tsx",
-        "target": "@components/fisher-ui/components/motion/morphing-tabs.tsx",
+        "path": "components/morphing-tabs/morphing-tabs.tsx",
+        "target": "@components/fisher-ui/morphing-tabs/morphing-tabs.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3772,19 +3404,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/swipeable-list"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/swipeable-list.tsx",
-        "target": "@components/fisher-ui/components/motion/swipeable-list.tsx",
+        "path": "components/swipeable-list/swipeable-list.tsx",
+        "target": "@components/fisher-ui/swipeable-list/swipeable-list.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3805,29 +3433,25 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/overflow-actions"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/overflow-actions.tsx",
-        "target": "@components/fisher-ui/components/motion/overflow-actions.tsx",
+        "path": "components/overflow-actions/overflow-actions.tsx",
+        "target": "@components/fisher-ui/overflow-actions/overflow-actions.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "path": "components/shared/use-hover-capable.ts",
+        "target": "@components/fisher-ui/shared/use-hover-capable.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3847,19 +3471,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/expandable-action-bar"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/expandable-action-bar.tsx",
-        "target": "@components/fisher-ui/components/motion/expandable-action-bar.tsx",
+        "path": "components/expandable-action-bar/expandable-action-bar.tsx",
+        "target": "@components/fisher-ui/expandable-action-bar/expandable-action-bar.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3892,49 +3512,45 @@
         "dqnamo-red-3": "color(display-p3 0.211 0.081 0.099)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/prediction-market"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/button/base.tsx",
-        "target": "@components/fisher-ui/components/motion/button/base.tsx",
+        "path": "components/shared/base.tsx",
+        "target": "@components/fisher-ui/shared/base.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/button/stateful.tsx",
-        "target": "@components/fisher-ui/components/motion/button/stateful.tsx",
+        "path": "components/polymarket/stateful.tsx",
+        "target": "@components/fisher-ui/polymarket/stateful.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/number-ticker.tsx",
-        "target": "@components/fisher-ui/components/motion/number-ticker.tsx",
+        "path": "components/shared/number-ticker.tsx",
+        "target": "@components/fisher-ui/shared/number-ticker.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/prediction-market.tsx",
-        "target": "@components/fisher-ui/components/motion/prediction-market.tsx",
+        "path": "components/polymarket/prediction-market.tsx",
+        "target": "@components/fisher-ui/polymarket/prediction-market.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/tabs.tsx",
-        "target": "@components/fisher-ui/components/motion/tabs.tsx",
+        "path": "components/polymarket/tabs.tsx",
+        "target": "@components/fisher-ui/polymarket/tabs.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "path": "components/shared/use-hover-capable.ts",
+        "target": "@components/fisher-ui/shared/use-hover-capable.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3954,24 +3570,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/otp-input"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/otp-input.tsx",
-        "target": "@components/fisher-ui/components/motion/otp-input.tsx",
+        "path": "components/otp-input/otp-input.tsx",
+        "target": "@components/fisher-ui/otp-input/otp-input.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -3992,24 +3604,20 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/bloom-menu"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/bloom-menu.tsx",
-        "target": "@components/fisher-ui/components/motion/bloom-menu.tsx",
+        "path": "components/bloom-menu/bloom-menu.tsx",
+        "target": "@components/fisher-ui/bloom-menu/bloom-menu.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4030,69 +3638,65 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/swap"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/swap.tsx",
-        "target": "@components/fisher-ui/components/motion/swap.tsx",
+        "path": "components/crypto-swap/swap.tsx",
+        "target": "@components/fisher-ui/crypto-swap/swap.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/constants.ts",
-        "target": "@components/fisher-ui/components/motion/swap/constants.ts",
+        "path": "components/crypto-swap/constants.ts",
+        "target": "@components/fisher-ui/crypto-swap/constants.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/controls.tsx",
-        "target": "@components/fisher-ui/components/motion/swap/controls.tsx",
+        "path": "components/crypto-swap/controls.tsx",
+        "target": "@components/fisher-ui/crypto-swap/controls.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/data.ts",
-        "target": "@components/fisher-ui/components/motion/swap/data.ts",
+        "path": "components/crypto-swap/data.ts",
+        "target": "@components/fisher-ui/crypto-swap/data.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/field.tsx",
-        "target": "@components/fisher-ui/components/motion/swap/field.tsx",
+        "path": "components/crypto-swap/field.tsx",
+        "target": "@components/fisher-ui/crypto-swap/field.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/quote-row.tsx",
-        "target": "@components/fisher-ui/components/motion/swap/quote-row.tsx",
+        "path": "components/crypto-swap/quote-row.tsx",
+        "target": "@components/fisher-ui/crypto-swap/quote-row.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/token-badges.tsx",
-        "target": "@components/fisher-ui/components/motion/swap/token-badges.tsx",
+        "path": "components/crypto-swap/token-badges.tsx",
+        "target": "@components/fisher-ui/crypto-swap/token-badges.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/token-picker.tsx",
-        "target": "@components/fisher-ui/components/motion/swap/token-picker.tsx",
+        "path": "components/crypto-swap/token-picker.tsx",
+        "target": "@components/fisher-ui/crypto-swap/token-picker.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/types.ts",
-        "target": "@components/fisher-ui/components/motion/swap/types.ts",
+        "path": "components/crypto-swap/types.ts",
+        "target": "@components/fisher-ui/crypto-swap/types.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/swap/utils.ts",
-        "target": "@components/fisher-ui/components/motion/swap/utils.ts",
+        "path": "components/crypto-swap/utils.ts",
+        "target": "@components/fisher-ui/crypto-swap/utils.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4114,24 +3718,20 @@
       "@types/react-dom@^19.2.3",
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/command-palette"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/command-palette.tsx",
-        "target": "@components/fisher-ui/components/motion/command-palette.tsx",
+        "path": "components/command-palette/command-palette.tsx",
+        "target": "@components/fisher-ui/command-palette/command-palette.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4151,44 +3751,40 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/preview-rail"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/preview-rail.tsx",
-        "target": "@components/fisher-ui/components/motion/preview-rail.tsx",
+        "path": "components/preview-rail/preview-rail.tsx",
+        "target": "@components/fisher-ui/preview-rail/preview-rail.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-dismiss.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-dismiss.ts",
+        "path": "components/preview-rail/use-dismiss.ts",
+        "target": "@components/fisher-ui/preview-rail/use-dismiss.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-hover-gesture.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-hover-gesture.ts",
+        "path": "components/preview-rail/use-hover-gesture.ts",
+        "target": "@components/fisher-ui/preview-rail/use-hover-gesture.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/hooks/use-tap-gesture.ts",
-        "target": "@components/fisher-ui/lib/hooks/use-tap-gesture.ts",
+        "path": "components/preview-rail/use-tap-gesture.ts",
+        "target": "@components/fisher-ui/preview-rail/use-tap-gesture.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/lib/touch.ts",
-        "target": "@components/fisher-ui/lib/touch.ts",
+        "path": "components/shared/touch.ts",
+        "target": "@components/fisher-ui/shared/touch.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4211,19 +3807,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Local",
-      "url": "local"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/emoji-reaction.tsx",
-        "target": "@components/fisher-ui/components/motion/emoji-reaction.tsx",
+        "path": "components/emoji-reaction/emoji-reaction.tsx",
+        "target": "@components/fisher-ui/emoji-reaction/emoji-reaction.tsx",
         "type": "registry:file"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4242,19 +3834,15 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Local",
-      "url": "local"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/fluid-orb.tsx",
-        "target": "@components/fisher-ui/components/motion/fluid-orb.tsx",
+        "path": "components/chat-gpt-orb/fluid-orb.tsx",
+        "target": "@components/fisher-ui/chat-gpt-orb/fluid-orb.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4270,14 +3858,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/coverflowgallery"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/coverflowgallery.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/coverflowgallery.tsx",
+        "path": "components/cover-gallery/coverflowgallery.tsx",
+        "target": "@components/fisher-ui/cover-gallery/coverflowgallery.tsx",
         "type": "registry:component"
       }
     ]
@@ -4295,14 +3879,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/boxcarousel"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/boxcarousel.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/boxcarousel.tsx",
+        "path": "components/cube-carousel/boxcarousel.tsx",
+        "target": "@components/fisher-ui/cube-carousel/boxcarousel.tsx",
         "type": "registry:component"
       }
     ]
@@ -4321,14 +3901,10 @@
       "@types/react@^19.2.7",
       "@types/three@^0.181.0"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/gallery-tunnel"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/gallery-tunnel.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/gallery-tunnel.tsx",
+        "path": "components/gallery-passage/gallery-tunnel.tsx",
+        "target": "@components/fisher-ui/gallery-passage/gallery-tunnel.tsx",
         "type": "registry:component"
       }
     ]
@@ -4346,14 +3922,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/coverflowcarousel"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/coverflowcarousel.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/coverflowcarousel.tsx",
+        "path": "components/flow-carousel/coverflowcarousel.tsx",
+        "target": "@components/fisher-ui/flow-carousel/coverflowcarousel.tsx",
         "type": "registry:component"
       }
     ]
@@ -4369,14 +3941,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/roundcarousel"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/roundcarousel.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/roundcarousel.tsx",
+        "path": "components/orbit-carousel/roundcarousel.tsx",
+        "target": "@components/fisher-ui/orbit-carousel/roundcarousel.tsx",
         "type": "registry:component"
       }
     ]
@@ -4397,14 +3965,10 @@
       "@types/react@^19.2.7",
       "@types/three@^0.181.0"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/globe"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/globe.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/globe.tsx",
+        "path": "components/globe/globe.tsx",
+        "target": "@components/fisher-ui/globe/globe.tsx",
         "type": "registry:component"
       }
     ]
@@ -4420,14 +3984,10 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "Originkit",
-      "url": "originkit/cosmic-orb"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/cosmic-orb.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/cosmic-orb.tsx",
+        "path": "components/cosmic-orb/cosmic-orb.tsx",
+        "target": "@components/fisher-ui/cosmic-orb/cosmic-orb.tsx",
         "type": "registry:component"
       }
     ]
@@ -4471,19 +4031,15 @@
         "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
       }
     },
-    "source": {
-      "name": "dqnamo",
-      "url": "https://www.dqnamo.com/experiments/cassette-player"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/dqnamo/cassette-player/components/ui/cassette-player.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/dqnamo/cassette-player/components/ui/cassette-player.tsx",
+        "path": "components/cassette-player/cassette-player.tsx",
+        "target": "@components/fisher-ui/cassette-player/cassette-player.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       },
       {
@@ -4508,14 +4064,10 @@
       }
     },
     "docs": "Cloud Drift requires a WebGPU-capable browser and HTTPS (or localhost). Its compiled runtime is included under public/.",
-    "source": {
-      "name": "TypeGPU",
-      "url": "https://docs.swmansion.com/TypeGPU/examples/#example=rendering--clouds"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/typegpu/clouds/components/ui/clouds.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/typegpu/clouds/components/ui/clouds.tsx",
+        "path": "components/cloud-drift/clouds.tsx",
+        "target": "@components/fisher-ui/cloud-drift/clouds.tsx",
         "type": "registry:component"
       },
       {
@@ -4548,14 +4100,10 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "tom UI",
-      "url": "https://21st.dev/community/components/tom_ui/animated-gradient"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/animated-gradient.tsx",
-        "target": "@components/fisher-ui/components/animated-gradient.tsx",
+        "path": "components/flowing-gradient/animated-gradient.tsx",
+        "target": "@components/fisher-ui/flowing-gradient/animated-gradient.tsx",
         "type": "registry:component"
       }
     ]
@@ -4575,14 +4123,10 @@
       }
     },
     "docs": "Jelly Slider requires a WebGPU-capable browser and HTTPS (or localhost). Its compiled runtime is included under public/.",
-    "source": {
-      "name": "TypeGPU",
-      "url": "https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-slider"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/typegpu/jelly-slider/components/ui/jelly-slider.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/typegpu/jelly-slider/components/ui/jelly-slider.tsx",
+        "path": "components/jelly-slider/jelly-slider.tsx",
+        "target": "@components/fisher-ui/jelly-slider/jelly-slider.tsx",
         "type": "registry:component"
       },
       {
@@ -4612,14 +4156,10 @@
       }
     },
     "docs": "Confetti requires a WebGPU-capable browser and HTTPS (or localhost). Its compiled runtime is included under public/.",
-    "source": {
-      "name": "TypeGPU",
-      "url": "https://docs.swmansion.com/TypeGPU/examples/"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/jakob-ui/typegpu/confetti/components/ui/confetti.tsx",
-        "target": "@components/fisher-ui/components/jakob-ui/typegpu/confetti/components/ui/confetti.tsx",
+        "path": "components/confetti/confetti.tsx",
+        "target": "@components/fisher-ui/confetti/confetti.tsx",
         "type": "registry:component"
       },
       {
@@ -4659,19 +4199,15 @@
         "font-custom": "\"Instrument Serif\", serif"
       }
     },
-    "source": {
-      "name": "Great UI",
-      "url": "https://www.great-ui.com/r/text-reveal.json"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/ui/TextReveal.tsx",
-        "target": "@components/fisher-ui/components/ui/TextReveal.tsx",
+        "path": "components/text-reveal/TextReveal.tsx",
+        "target": "@components/fisher-ui/text-reveal/TextReveal.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4691,29 +4227,25 @@
     "devDependencies": [
       "@types/react@^19.2.7"
     ],
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/number-ticker"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/animated-number.tsx",
-        "target": "@components/fisher-ui/components/motion/animated-number.tsx",
+        "path": "components/number-ticker/animated-number.tsx",
+        "target": "@components/fisher-ui/number-ticker/animated-number.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/number-ticker.tsx",
-        "target": "@components/fisher-ui/components/motion/number-ticker.tsx",
+        "path": "components/shared/number-ticker.tsx",
+        "target": "@components/fisher-ui/shared/number-ticker.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
@@ -4747,94 +4279,90 @@
         "primary": "var(--color-neutral-100)"
       }
     },
-    "source": {
-      "name": "BEUI",
-      "url": "@beui/table"
-    },
     "files": [
       {
-        "path": "components/fisher-ui/components/motion/checkbox.tsx",
-        "target": "@components/fisher-ui/components/motion/checkbox.tsx",
+        "path": "components/shared/checkbox.tsx",
+        "target": "@components/fisher-ui/shared/checkbox.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/switch.tsx",
-        "target": "@components/fisher-ui/components/motion/switch.tsx",
+        "path": "components/table/switch.tsx",
+        "target": "@components/fisher-ui/table/switch.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/editable-cell.tsx",
-        "target": "@components/fisher-ui/components/motion/table/editable-cell.tsx",
+        "path": "components/table/editable-cell.tsx",
+        "target": "@components/fisher-ui/table/editable-cell.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/index.tsx",
-        "target": "@components/fisher-ui/components/motion/table/index.tsx",
+        "path": "components/table/index.tsx",
+        "target": "@components/fisher-ui/table/index.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/row-handle.tsx",
-        "target": "@components/fisher-ui/components/motion/table/row-handle.tsx",
+        "path": "components/table/row-handle.tsx",
+        "target": "@components/fisher-ui/table/row-handle.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/skeleton-rows.tsx",
-        "target": "@components/fisher-ui/components/motion/table/skeleton-rows.tsx",
+        "path": "components/table/skeleton-rows.tsx",
+        "target": "@components/fisher-ui/table/skeleton-rows.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/table-header.tsx",
-        "target": "@components/fisher-ui/components/motion/table/table-header.tsx",
+        "path": "components/table/table-header.tsx",
+        "target": "@components/fisher-ui/table/table-header.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/table-menu.tsx",
-        "target": "@components/fisher-ui/components/motion/table/table-menu.tsx",
+        "path": "components/table/table-menu.tsx",
+        "target": "@components/fisher-ui/table/table-menu.tsx",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/types.ts",
-        "target": "@components/fisher-ui/components/motion/table/types.ts",
+        "path": "components/table/types.ts",
+        "target": "@components/fisher-ui/table/types.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/use-column-reorder.ts",
-        "target": "@components/fisher-ui/components/motion/table/use-column-reorder.ts",
+        "path": "components/table/use-column-reorder.ts",
+        "target": "@components/fisher-ui/table/use-column-reorder.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/use-column-resize.ts",
-        "target": "@components/fisher-ui/components/motion/table/use-column-resize.ts",
+        "path": "components/table/use-column-resize.ts",
+        "target": "@components/fisher-ui/table/use-column-resize.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/use-column-sort.ts",
-        "target": "@components/fisher-ui/components/motion/table/use-column-sort.ts",
+        "path": "components/table/use-column-sort.ts",
+        "target": "@components/fisher-ui/table/use-column-sort.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/use-row-selection.ts",
-        "target": "@components/fisher-ui/components/motion/table/use-row-selection.ts",
+        "path": "components/table/use-row-selection.ts",
+        "target": "@components/fisher-ui/table/use-row-selection.ts",
         "type": "registry:hook"
       },
       {
-        "path": "components/fisher-ui/components/motion/table/utils.ts",
-        "target": "@components/fisher-ui/components/motion/table/utils.ts",
+        "path": "components/table/utils.ts",
+        "target": "@components/fisher-ui/table/utils.ts",
         "type": "registry:component"
       },
       {
-        "path": "components/fisher-ui/lib/ease.ts",
-        "target": "@components/fisher-ui/lib/ease.ts",
+        "path": "components/shared/ease.ts",
+        "target": "@components/fisher-ui/shared/ease.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/touch.ts",
-        "target": "@components/fisher-ui/lib/touch.ts",
+        "path": "components/shared/touch.ts",
+        "target": "@components/fisher-ui/shared/touch.ts",
         "type": "registry:lib"
       },
       {
-        "path": "components/fisher-ui/lib/utils.ts",
-        "target": "@components/fisher-ui/lib/utils.ts",
+        "path": "components/shared/utils.ts",
+        "target": "@components/fisher-ui/shared/utils.ts",
         "type": "registry:lib"
       }
     ]
