@@ -1,0 +1,4842 @@
+[
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "receipt-printer",
+    "type": "registry:block",
+    "title": "Receipt Printer",
+    "description": "Animated checkout status machine with processing, printing, and completed receipt stages.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@phosphor-icons/react@^2.1.10",
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-grayscale-1": "var(--receipt-grayscale-1, #fafafa)",
+        "color-grayscale-2": "var(--receipt-grayscale-2, #f5f5f5)",
+        "color-grayscale-3": "var(--receipt-grayscale-3, #e5e5e5)",
+        "color-grayscale-4": "var(--receipt-grayscale-4, #d4d4d4)",
+        "color-grayscale-8": "var(--receipt-grayscale-8, #525252)",
+        "color-grayscale-11": "var(--receipt-grayscale-11, #262626)",
+        "color-grayscale-12": "var(--receipt-grayscale-12, #171717)",
+        "color-green-9": "var(--receipt-green-9, #16a34a)"
+      },
+      "light": {
+        "receipt-grayscale-1": "color(display-p3 0.992 0.992 0.989)",
+        "receipt-grayscale-2": "color(display-p3 0.977 0.977 0.973)",
+        "receipt-grayscale-3": "color(display-p3 0.943 0.942 0.936)",
+        "receipt-grayscale-4": "color(display-p3 0.913 0.912 0.903)",
+        "receipt-grayscale-8": "color(display-p3 0.738 0.734 0.713)",
+        "receipt-grayscale-11": "color(display-p3 0.388 0.388 0.37)",
+        "receipt-grayscale-12": "color(display-p3 0.129 0.126 0.111)",
+        "receipt-green-9": "color(display-p3 0.332 0.634 0.442)"
+      },
+      "dark": {
+        "receipt-grayscale-1": "color(display-p3 0.067 0.067 0.063)",
+        "receipt-grayscale-2": "color(display-p3 0.098 0.098 0.094)",
+        "receipt-grayscale-3": "color(display-p3 0.135 0.135 0.129)",
+        "receipt-grayscale-4": "color(display-p3 0.164 0.163 0.156)",
+        "receipt-grayscale-8": "color(display-p3 0.384 0.378 0.357)",
+        "receipt-grayscale-11": "color(display-p3 0.707 0.703 0.68)",
+        "receipt-grayscale-12": "color(display-p3 0.933 0.933 0.926)",
+        "receipt-green-9": "color(display-p3 0.332 0.634 0.442)"
+      }
+    },
+    "source": {
+      "name": "Satisfy UI",
+      "url": "local"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/ReceiptPrinter.tsx",
+        "target": "@components/fisher-ui/components/ReceiptPrinter.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/helpers/classname-helper.ts",
+        "target": "@components/fisher-ui/helpers/classname-helper.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "public/textures/plastic-noise.svg",
+        "target": "~/public/textures/plastic-noise.svg",
+        "type": "registry:file"
+      },
+      {
+        "path": "public/textures/receipt-paper.svg",
+        "target": "~/public/textures/receipt-paper.svg",
+        "type": "registry:file"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "hold-to-confirm",
+    "type": "registry:block",
+    "title": "Hold to Confirm",
+    "description": "Press-and-hold confirmation for destructive actions with cancellation, timed undo, and replay states.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@phosphor-icons/react@^2.1.10",
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-grayscale-1": "var(--receipt-grayscale-1, #fafafa)",
+        "color-grayscale-2": "var(--receipt-grayscale-2, #f5f5f5)",
+        "color-grayscale-3": "var(--receipt-grayscale-3, #e5e5e5)",
+        "color-grayscale-4": "var(--receipt-grayscale-4, #d4d4d4)",
+        "color-grayscale-6": "var(--receipt-grayscale-6, #dad9d6)",
+        "color-grayscale-8": "var(--receipt-grayscale-8, #525252)",
+        "color-grayscale-11": "var(--receipt-grayscale-11, #262626)",
+        "color-grayscale-12": "var(--receipt-grayscale-12, #171717)",
+        "color-green-9": "var(--receipt-green-9, #16a34a)",
+        "color-red-3": "var(--dqnamo-red-3, #fbecec)",
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)",
+        "color-red-8": "var(--dqnamo-red-8, #df9292)",
+        "color-red-9": "var(--dqnamo-red-9, #d45353)",
+        "color-red-11": "var(--dqnamo-red-11, #be3c39)"
+      },
+      "light": {
+        "receipt-grayscale-1": "color(display-p3 0.992 0.992 0.989)",
+        "receipt-grayscale-2": "color(display-p3 0.977 0.977 0.973)",
+        "receipt-grayscale-3": "color(display-p3 0.943 0.942 0.936)",
+        "receipt-grayscale-4": "color(display-p3 0.913 0.912 0.903)",
+        "receipt-grayscale-6": "color(display-p3 0.854 0.852 0.839)",
+        "receipt-grayscale-8": "color(display-p3 0.738 0.734 0.713)",
+        "receipt-grayscale-11": "color(display-p3 0.388 0.388 0.37)",
+        "receipt-grayscale-12": "color(display-p3 0.129 0.126 0.111)",
+        "receipt-green-9": "color(display-p3 0.332 0.634 0.442)",
+        "dqnamo-red-3": "color(display-p3 0.985 0.925 0.925)",
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)",
+        "dqnamo-red-8": "color(display-p3 0.872 0.575 0.572)",
+        "dqnamo-red-9": "color(display-p3 0.83 0.329 0.324)",
+        "dqnamo-red-11": "color(display-p3 0.744 0.234 0.222)"
+      },
+      "dark": {
+        "receipt-grayscale-1": "color(display-p3 0.067 0.067 0.063)",
+        "receipt-grayscale-2": "color(display-p3 0.098 0.098 0.094)",
+        "receipt-grayscale-3": "color(display-p3 0.135 0.135 0.129)",
+        "receipt-grayscale-4": "color(display-p3 0.164 0.163 0.156)",
+        "receipt-grayscale-6": "color(display-p3 0.23 0.229 0.217)",
+        "receipt-grayscale-8": "color(display-p3 0.384 0.378 0.357)",
+        "receipt-grayscale-11": "color(display-p3 0.707 0.703 0.68)",
+        "receipt-grayscale-12": "color(display-p3 0.933 0.933 0.926)",
+        "receipt-green-9": "color(display-p3 0.332 0.634 0.442)",
+        "dqnamo-red-3": "color(display-p3 0.211 0.081 0.099)",
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)",
+        "dqnamo-red-8": "color(display-p3 0.659 0.298 0.297)",
+        "dqnamo-red-9": "color(display-p3 0.83 0.329 0.324)",
+        "dqnamo-red-11": "color(display-p3 1 0.57 0.55)"
+      }
+    },
+    "source": {
+      "name": "dqnamo",
+      "url": "https://www.dqnamo.com/experiments/hold-to-confirm"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/HoldToConfirmButton.tsx",
+        "target": "@components/fisher-ui/components/HoldToConfirmButton.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/UndoNotice.tsx",
+        "target": "@components/fisher-ui/components/UndoNotice.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/helpers/classname-helper.ts",
+        "target": "@components/fisher-ui/helpers/classname-helper.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "countdown",
+    "type": "registry:ui",
+    "title": "Countdown",
+    "description": "Headless rolling-digit countdown with composable labels and display styles.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Appica",
+      "url": "@appica/ui-react/countdown"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/text/countdown.tsx",
+        "target": "@components/fisher-ui/components/text/countdown.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "particle-scroll",
+    "type": "registry:ui",
+    "title": "Particle Scroll",
+    "description": "WebGL particle scroll effect that dissolves and reassembles page content as you scroll.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Canvas UI",
+      "url": "https://canvasui.dev"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/canvasui/ParticleScroll.tsx",
+        "target": "@components/fisher-ui/components/canvasui/ParticleScroll.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "prompt-input",
+    "type": "registry:ui",
+    "title": "Prompt Input",
+    "description": "AI prompt bar with model selection, effort controls, attachments, and voice input.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0",
+      "tw-animate-css@^1.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "css": {
+      "@import \"tw-animate-css\"": {}
+    },
+    "cssVars": {
+      "light": {
+        "muted": "oklch(0.967 0.001 286.375)",
+        "muted-foreground": "oklch(0.552 0.016 285.938)"
+      },
+      "dark": {
+        "muted": "oklch(0.274 0.006 286.033)",
+        "muted-foreground": "oklch(0.705 0.015 286.067)"
+      }
+    },
+    "source": {
+      "name": "21st",
+      "url": "https://21st.dev/r/easemize/ai-chat-input"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/ui/ai-chat-input.tsx",
+        "target": "@components/fisher-ui/components/ui/ai-chat-input.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "liquid-metal",
+    "type": "registry:ui",
+    "title": "Liquid Metal",
+    "description": "A reflective liquid-metal surface with fluid highlights and tactile motion.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@paper-design/shaders-react@^0.0.78",
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/liquid-metal.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/liquid-metal/components/ui/liquid-metal.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/liquid-metal/components/ui/liquid-metal.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "animated-button",
+    "type": "registry:ui",
+    "title": "Animated Button",
+    "description": "An animated action button with responsive hover and press feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/animated-button.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/animated-button/components/ui/animated-button.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/animated-button/components/ui/animated-button.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "flip-fade-text",
+    "type": "registry:ui",
+    "title": "Flip Fade Text",
+    "description": "A text transition that flips and fades between messages.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/flip-fade-text.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/flip-fade-text/components/ui/flip-fade-text.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/flip-fade-text/components/ui/flip-fade-text.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "interactive-book",
+    "type": "registry:block",
+    "title": "Interactive Book",
+    "description": "An interactive book interface with tactile page-turning motion.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "css": {
+      ".prose": {},
+      ".prose p": {},
+      ".prose h1,\n.prose h2,\n.prose h3,\n.prose h4,\n.prose h5,\n.prose h6": {},
+      ".prose a": {},
+      ".prose code": {},
+      ".prose pre": {},
+      ".prose strong": {},
+      ".prose ul,\n.prose ol": {},
+      ".prose li": {}
+    },
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/interactive-book.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/interactive-book/components/ui/interactive-book.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/interactive-book/components/ui/interactive-book.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "depth-carousel",
+    "type": "registry:block",
+    "title": "Depth Carousel",
+    "description": "A perspective carousel that arranges content in layered three-dimensional space.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/perspective-carousel.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/perspective-carousel/components/ui/perspective-carousel.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/perspective-carousel/components/ui/perspective-carousel.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "angled-carousel",
+    "type": "registry:block",
+    "title": "Angled Carousel",
+    "description": "A diagonal carousel for browsing visual content with dynamic movement.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/diagonal-carousel.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/diagonal-carousel/components/ui/diagonal-carousel.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/diagonal-carousel/components/ui/diagonal-carousel.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "staggered-grid",
+    "type": "registry:block",
+    "title": "Staggered Grid",
+    "description": "A responsive content grid with staggered positioning and motion.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "gsap@^3.14.2",
+      "imagesloaded@^5.0.0",
+      "react-icons@^5.5.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/imagesloaded@^4.1.7",
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/staggered-grid.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/staggered-grid/components/ui/staggered-grid.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/staggered-grid/components/ui/staggered-grid.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "kinetic-text-loader",
+    "type": "registry:ui",
+    "title": "Kinetic Text Loader",
+    "description": "An animated text loader that uses kinetic type to communicate progress.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/kinetic-text-loader.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/kinetic-text-loader/components/ui/kinetic-text-loader.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/kinetic-text-loader/components/ui/kinetic-text-loader.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "wavefield-grid",
+    "type": "registry:ui",
+    "title": "Wavefield Grid",
+    "description": "An animated wave-grid background for adding depth behind page content.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0",
+      "three@^0.181.2"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7",
+      "@types/three@^0.181.0"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/wave-grid-background.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/wave-grid-background/components/ui/wave-grid-background.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/wave-grid-background/components/ui/wave-grid-background.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "aurora-horizon",
+    "type": "registry:ui",
+    "title": "Aurora Horizon",
+    "description": "A hero section with a soft, animated aurora backdrop.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/aurora-hero.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/aurora-hero/components/ui/aurora-hero.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/aurora-hero/components/ui/aurora-hero.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "split-text",
+    "type": "registry:ui",
+    "title": "SplitText",
+    "description": "Splits text into characters / words for staggered entrance animation.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@gsap/react@^2.1.2",
+      "gsap@^3.14.2"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "React Bits",
+      "url": "@react-bits/SplitText-JS-CSS"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/splittext-js-css/SplitText/SplitText.jsx",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/splittext-js-css/SplitText/SplitText.jsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "blur-text",
+    "type": "registry:ui",
+    "title": "BlurText",
+    "description": "Text starts blurred then crisply resolves for a soft-focus reveal effect.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "React Bits",
+      "url": "@react-bits/BlurText-JS-CSS"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/blurtext-js-css/BlurText/BlurText.jsx",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/blurtext-js-css/BlurText/BlurText.jsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "text-type",
+    "type": "registry:ui",
+    "title": "TextType",
+    "description": "Typewriter effect with blinking cursor and adjustable typing cadence.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "gsap@^3.14.2"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "React Bits",
+      "url": "@react-bits/TextType-JS-CSS"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.css",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.jsx",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/texttype-js-css/TextType/TextType.jsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "dome-gallery",
+    "type": "registry:block",
+    "title": "DomeGallery",
+    "description": "Immersive 3D dome gallery projecting images on a hemispheric surface.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@use-gesture/react@^10.3.1"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "React Bits",
+      "url": "@react-bits/DomeGallery-JS-CSS"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.css",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.jsx",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/domegallery-js-css/DomeGallery/DomeGallery.jsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "luminous-rays",
+    "type": "registry:ui",
+    "title": "Luminous Rays",
+    "description": "Volumetric light rays/beams with customizable direction.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "ogl@^1.0.11"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "React Bits",
+      "url": "@react-bits/LightRays-JS-CSS"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.css",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.jsx",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/lightrays-js-css/LightRays/LightRays.jsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "prismatic-beams",
+    "type": "registry:ui",
+    "title": "Prismatic Beams",
+    "description": "Crossing animated ribbons with customizable properties.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@react-three/drei@^10.7.7",
+      "@react-three/fiber@^9.7.0",
+      "three@^0.181.2"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7",
+      "@types/three@^0.181.0"
+    ],
+    "source": {
+      "name": "React Bits",
+      "url": "@react-bits/Beams-JS-CSS"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.css",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.jsx",
+        "target": "@components/fisher-ui/components/jakob-ui/react-bits/beams-js-css/Beams/Beams.jsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "code",
+    "type": "registry:ui",
+    "title": "Code",
+    "description": "A code component that animates the code as it is written.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "class-variance-authority@^0.7.1",
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "next-themes@^0.4.6",
+      "shiki@^4.4.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Animate UI",
+      "url": "@animate-ui/components-animate-code"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/animate/code.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/animate/code.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/buttons/copy.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/components/buttons/copy.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/code-block.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/code-block.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/slot.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/animate/slot.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/buttons/button.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/components/animate-ui/primitives/buttons/button.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-controlled-state.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-controlled-state.tsx",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-is-in-view.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/hooks/use-is-in-view.tsx",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/lib/get-strict-context.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code/lib/get-strict-context.tsx",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "code-tabs",
+    "type": "registry:ui",
+    "title": "Code Tabs",
+    "description": "A tabs component that displays code for different languages.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "class-variance-authority@^0.7.1",
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "next-themes@^0.4.6",
+      "shiki@^4.4.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Animate UI",
+      "url": "@animate-ui/components-animate-code-tabs"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/animate/code-tabs.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/animate/code-tabs.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/buttons/copy.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/components/buttons/copy.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/slot.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/slot.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/tabs.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/animate/tabs.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/buttons/button.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/buttons/button.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/effects/highlight.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/components/animate-ui/primitives/effects/highlight.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/hooks/use-controlled-state.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/hooks/use-controlled-state.tsx",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/lib/get-strict-context.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-animate-code-tabs/lib/get-strict-context.tsx",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "files",
+    "type": "registry:ui",
+    "title": "Files",
+    "description": "A component that allows you to display a list of files and folders.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "radix-ui@^1.6.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)"
+      },
+      "light": {
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)"
+      },
+      "dark": {
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
+      }
+    },
+    "source": {
+      "name": "Animate UI",
+      "url": "@animate-ui/components-radix-files"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/components/radix/files.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/components/radix/files.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/effects/highlight.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/effects/highlight.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/accordion.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/accordion.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/files.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/components/animate-ui/primitives/radix/files.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/hooks/use-controlled-state.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/hooks/use-controlled-state.tsx",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/lib/get-strict-context.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-radix-files/lib/get-strict-context.tsx",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "hexagonal-field",
+    "type": "registry:ui",
+    "title": "Hexagonal Field",
+    "description": "A background component featuring an interactive hexagon grid.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Animate UI",
+      "url": "@animate-ui/components-backgrounds-hexagon"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-backgrounds-hexagon/components/animate-ui/components/backgrounds/hexagon.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-backgrounds-hexagon/components/animate-ui/components/backgrounds/hexagon.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "notification-list",
+    "type": "registry:block",
+    "title": "Notification List",
+    "description": "A fun notification list with animated stacking and cards that expand as you interact.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Animate UI",
+      "url": "@animate-ui/components-community-notification-list"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/animate-ui/components-community-notification-list/components/animate-ui/components/community/notification-list.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/animate-ui/components-community-notification-list/components/animate-ui/components/community/notification-list.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "apple-switch",
+    "type": "registry:ui",
+    "title": "Apple Switch",
+    "description": "Animated toggle switch with separate track/thumb sizing, spring feedback, optional label text, and tone variants.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "light": {
+        "background": "oklch(1 0 0)",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "muted": "oklch(0.967 0.001 286.375)",
+        "accent": "oklch(0.967 0.001 286.375)"
+      },
+      "dark": {
+        "background": "oklch(0.141 0.005 285.823)",
+        "foreground": "oklch(0.985 0 0)",
+        "muted": "oklch(0.274 0.006 286.033)",
+        "accent": "oklch(0.274 0.006 286.033)"
+      }
+    },
+    "source": {
+      "name": "Unlumen UI",
+      "url": "@unlumen-ui/apple-switch"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/unlumen-ui/apple-switch/components/unlumen-ui/apple-switch.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/unlumen-ui/apple-switch/components/unlumen-ui/apple-switch.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "integrations-2",
+    "type": "registry:block",
+    "title": "Integrations 2",
+    "description": "An integrations panel for connecting and managing external services.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/integrations-2.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/integrations-2/components/ui/integrations-2.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/integrations-2/components/ui/integrations-2.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "knob-slider",
+    "type": "registry:ui",
+    "title": "Knob Slider",
+    "description": "A rotary slider for adjusting values with precise pointer interaction.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0",
+      "react-use-measure@^2.1.7"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/knob-slider.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/knob-slider/components/ui/knob-slider.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/knob-slider/components/ui/knob-slider.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "frequency-picker",
+    "type": "registry:ui",
+    "title": "Frequency Picker",
+    "description": "A compact control for selecting a frequency from predefined options.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/frequency-selector.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/frequency-selector/components/ui/frequency-selector.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/frequency-selector/components/ui/frequency-selector.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "calendar-widget",
+    "type": "registry:block",
+    "title": "Calendar Widget",
+    "description": "A compact calendar widget for browsing and selecting dates.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/calendar-widget.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/calendar-widget/components/ui/calendar-widget.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/calendar-widget/components/ui/calendar-widget.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "range-selection-slider",
+    "type": "registry:ui",
+    "title": "Range Selection Slider",
+    "description": "A dual-handle slider for selecting a value range.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/range-selection-slider.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/range-selection-slider/components/ui/range-selection-slider.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/range-selection-slider/components/ui/range-selection-slider.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "pricing-widget",
+    "type": "registry:block",
+    "title": "Pricing Widget",
+    "description": "A pricing widget that presents plan details and a clear primary action.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@number-flow/react@^0.6.2",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/pricing-widget.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/pricing-widget/components/ui/pricing-widget.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/pricing-widget/components/ui/pricing-widget.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "swap-currency-card",
+    "type": "registry:block",
+    "title": "Swap Currency Card",
+    "description": "A currency conversion card for entering and swapping monetary values.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/swap-currency-card.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/swap-currency-card/components/ui/swap-currency-card.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/swap-currency-card/components/ui/swap-currency-card.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "show-qr",
+    "type": "registry:ui",
+    "title": "Show Qr",
+    "description": "A focused QR-code panel for sharing scannable information.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "qrcode.react@^4.2.0",
+      "react-icons@^5.5.0",
+      "react-use-measure@^2.1.7"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/show-qr.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/show-qr/components/ui/show-qr.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/show-qr/components/ui/show-qr.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "weight-widget",
+    "type": "registry:ui",
+    "title": "Weight Widget",
+    "description": "An interactive weight selector with clear value feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0",
+      "next-themes@^0.4.6"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/weight-widget.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/weight-widget/components/ui/weight-widget.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/weight-widget/components/ui/weight-widget.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "audio-scrubber",
+    "type": "registry:ui",
+    "title": "Audio Scrubber",
+    "description": "An audio waveform control for scrubbing through playback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "framer-motion@^12.23.26",
+      "next-themes@^0.4.6",
+      "react-icons@^5.5.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/waveform-scrub.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/waveform-scrub/components/ui/waveform-scrub.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/waveform-scrub/components/ui/waveform-scrub.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "tags",
+    "type": "registry:ui",
+    "title": "Tags",
+    "description": "A flexible tag picker for adding, viewing, and removing labels.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/tags.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/tags/components/ui/tags.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/tags/components/ui/tags.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "draw-signature",
+    "type": "registry:ui",
+    "title": "Draw Signature",
+    "description": "A signature canvas with smooth, natural drawing feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "next-themes@^0.4.6",
+      "react-icons@^5.5.0",
+      "react-use-measure@^2.1.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/draw-signature.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/draw-signature/components/ui/draw-signature.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/draw-signature/components/ui/draw-signature.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "inline-update",
+    "type": "registry:ui",
+    "title": "Inline Update",
+    "description": "An inline action pattern that reveals contextual controls without leaving the flow.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/inline-action.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/inline-action/components/ui/inline-action.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/inline-action/components/ui/inline-action.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "inline-copy",
+    "type": "registry:ui",
+    "title": "Inline Copy",
+    "description": "A compact inline toast for communicating status and feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0",
+      "react-icons@^5.5.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/inline-toast.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/inline-toast/components/ui/inline-toast.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/inline-toast/components/ui/inline-toast.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "license-key",
+    "type": "registry:ui",
+    "title": "License Key",
+    "description": "A license-key field with validation and activation states.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/licence-key.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/licence-key/components/ui/license-key.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/licence-key/components/ui/license-key.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "scroll-island",
+    "type": "registry:block",
+    "title": "Scroll Island",
+    "description": "A floating navigation island that responds to the page scroll position.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "react-use-measure@^2.1.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react-dom@^19.2.3",
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/scroll-island.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/scroll-island/components/ui/scroll-island.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/scroll-island/components/ui/scroll-island.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "voice-note",
+    "type": "registry:block",
+    "title": "Voice Note",
+    "description": "A voice-note player with waveform, duration, and playback controls.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "react-icons@^5.5.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif",
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)"
+      },
+      "light": {
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)"
+      },
+      "dark": {
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
+      }
+    },
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/voice-note.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/voice-note/components/ui/voice-note.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/voice-note/components/ui/voice-note.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "transaction-list",
+    "type": "registry:block",
+    "title": "Transaction List",
+    "description": "A structured transaction list for reviewing recent financial activity.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/transaction-list.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/transaction-list/components/ui/transaction-list.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/transaction-list/components/ui/transaction-list.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "feedback-action",
+    "type": "registry:ui",
+    "title": "Feedback Action",
+    "description": "A compact feedback control for recording a quick user response.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "react-icons@^5.5.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/feedback-action.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/feedback-action/components/ui/feedback-action.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/feedback-action/components/ui/feedback-action.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "event-reminders",
+    "type": "registry:block",
+    "title": "Event Reminders",
+    "description": "A reminder list for reviewing and managing upcoming events.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "react-icons@^5.5.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Watermelon",
+      "url": "https://registry.watermelon.sh/r/event-reminders.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/watermelon/event-reminders/components/ui/event-reminders.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/watermelon/event-reminders/components/ui/event-reminders.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "compact-music-player",
+    "type": "registry:block",
+    "title": "Music Player",
+    "description": "A compact music player with artwork, playback, and progress controls.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/music-player"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/music-player/components/ui/music-player.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/music-player/components/ui/music-player.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "music-player-2",
+    "type": "registry:ui",
+    "title": "Music Player 2",
+    "description": "Interactive live music player with real-time audio spectrum animations, a spinning vinyl disc, and song metadata.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Sahil Codex",
+      "url": "https://sahilcodex.vercel.app/r/music-player.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/ui/music-player.tsx",
+        "target": "@components/fisher-ui/components/ui/music-player.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "music-player-3",
+    "type": "registry:block",
+    "title": "Music Player 3",
+    "description": "A compact music player with artwork, playback, and progress controls.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Vengence UI",
+      "url": "https://www.vengenceui.com/r/music-player.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/vengence-ui/music-player/components/ui/music-player.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/vengence-ui/music-player/components/ui/music-player.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "scroll-split-card",
+    "type": "registry:block",
+    "title": "Scroll Split Card",
+    "description": "A scroll-driven card that separates content into animated visual layers.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/scroll-split-card"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/scroll-split-card/components/ui/scroll-split-card.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/scroll-split-card/components/ui/scroll-split-card.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "mac-keyboard",
+    "type": "registry:block",
+    "title": "Mac Keyboard",
+    "description": "An interactive Mac-style keyboard with responsive key feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/mac-keyboard"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/mac-keyboard/components/ui/mac-keyboard.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/mac-keyboard/components/ui/mac-keyboard.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "mac-keyboard-2",
+    "type": "registry:block",
+    "title": "Mac Keyboard 2",
+    "description": "An interactive keyboard demo with visual and audio key feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@tabler/icons-react@^3.46.0",
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Aceternity UI",
+      "url": "@aceternity/keyboard-demo"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/keyboard-demo.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/keyboard-demo.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/ui/keyboard.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/keyboard-demo/components/ui/keyboard.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "mac-keyboard-3",
+    "type": "registry:block",
+    "title": "Mac Keyboard 3",
+    "description": "Keychron K2-inspired keyboard with optional haptics and mechanical sound effects.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0",
+      "web-haptics@^0.0.6"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Sahil Codex",
+      "url": "https://sahilcodex.vercel.app/r/keyboard.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/ui/keyboard.tsx",
+        "target": "@components/fisher-ui/components/ui/keyboard.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "magnetic-dock",
+    "type": "registry:block",
+    "title": "Magnetic Dock",
+    "description": "A macOS-style magnetic dock with smooth scaling animations, spring physics, and premium micro-interactions. Supports both light and dark modes.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/magnetic-dock"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/magnetic-dock/components/ui/magnetic-dock.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/magnetic-dock/components/ui/magnetic-dock.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "scroll-tilted-grid",
+    "type": "registry:block",
+    "title": "Scroll Tilted Grid",
+    "description": "A cinematic image grid that tilts and resolves into focus as each frame crosses the viewport.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lenis@^1.3.25",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/scroll-tilted-grid"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/scroll-tilted-grid/components/ui/scroll-tilted-grid.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/scroll-tilted-grid/components/ui/scroll-tilted-grid.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "eye-tracking",
+    "type": "registry:ui",
+    "title": "Eye Tracking",
+    "description": "An animated eye that follows pointer movement across the interface.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/eye-tracking"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/eye-tracking/components/ui/eye-tracking.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/eye-tracking/components/ui/eye-tracking.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "card-stack",
+    "type": "registry:block",
+    "title": "Card Stack",
+    "description": "Premium hover card deck that fans outward and lifts the active card without changing its color or angle.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/orbit-card-stack"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/orbit-card-stack/components/ui/orbit-card-stack.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/orbit-card-stack/components/ui/orbit-card-stack.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "liquid-mirror",
+    "type": "registry:ui",
+    "title": "Liquid Mirror",
+    "description": "A fluid chrome effect with reflective motion and dimensional highlights.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Componentry",
+      "url": "@componentry/liquid-chrome"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/componentry/liquid-chrome/components/ui/liquid-chrome.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/componentry/liquid-chrome/components/ui/liquid-chrome.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "testimonial-stories",
+    "type": "registry:block",
+    "title": "Testimonial Stories",
+    "description": "A testimonial carousel with animated portraits and quote transitions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@tabler/icons-react@^3.46.0",
+      "motion@^13.1.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Aceternity UI",
+      "url": "@aceternity/animated-testimonials-demo"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/animated-testimonials-demo.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/animated-testimonials-demo.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/ui/animated-testimonials.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/animated-testimonials-demo/components/ui/animated-testimonials.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "terminal",
+    "type": "registry:block",
+    "title": "Terminal",
+    "description": "A terminal-style panel for presenting commands and developer output.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)"
+      },
+      "light": {
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)"
+      },
+      "dark": {
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
+      }
+    },
+    "source": {
+      "name": "Aceternity UI",
+      "url": "@aceternity/terminal-demo"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/terminal-demo.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/terminal-demo.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/ui/terminal.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/terminal-demo/components/ui/terminal.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "3-d-globe",
+    "type": "registry:ui",
+    "title": "3D Globe",
+    "description": "An interactive three-dimensional globe for visualizing global connections.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@react-three/drei@^10.7.7",
+      "@react-three/fiber@^9.7.0",
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0",
+      "three@^0.181.2"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7",
+      "@types/three@^0.181.0"
+    ],
+    "source": {
+      "name": "Aceternity UI",
+      "url": "@aceternity/3d-globe-demo"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/3d-globe-demo.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/3d-globe-demo.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/ui/3d-globe.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/3d-globe-demo/components/ui/3d-globe.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "compare",
+    "type": "registry:block",
+    "title": "Compare",
+    "description": "A draggable before-and-after comparison for inspecting two images.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@tabler/icons-react@^3.46.0",
+      "@tsparticles/engine@^3.9.1",
+      "@tsparticles/react@^3.0.0",
+      "@tsparticles/slim@^3.9.1",
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Aceternity UI",
+      "url": "@aceternity/compare-demo"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/compare-demo.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/compare-demo.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/compare.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/compare.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/sparkles.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/compare-demo/components/ui/sparkles.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "focus-lens",
+    "type": "registry:ui",
+    "title": "Focus Lens",
+    "description": "An interactive magnifying lens for revealing image details.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Aceternity UI",
+      "url": "@aceternity/lens-demo"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/lens-demo.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/lens-demo.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/ui/lens.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/aceternity/lens-demo/components/ui/lens.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cash-flow-chart",
+    "type": "registry:block",
+    "title": "Cash Flow Chart",
+    "description": "Interactive cash flow bar chart with keyboard focus, tooltips, and screen reader support.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "UI Tripled",
+      "url": "@uitripled/cash-flow-chart"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/uitripled/cash-flow-chart/components/uitripled/cash-flow-chart-carbon.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/uitripled/cash-flow-chart/components/uitripled/cash-flow-chart-carbon.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "wizard-form",
+    "type": "registry:ui",
+    "title": "Wizard Form",
+    "description": "Multi-step wizard form with animated transitions, validation, and progress tracking.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "class-variance-authority@^0.7.1",
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "radix-ui@^1.6.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "light": {
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "primary": "var(--color-neutral-800)",
+        "secondary": "var(--color-neutral-600)"
+      },
+      "dark": {
+        "foreground": "oklch(0.985 0 0)",
+        "primary": "var(--color-neutral-100)",
+        "secondary": "var(--color-neutral-300)"
+      }
+    },
+    "source": {
+      "name": "UI Tripled",
+      "url": "@uitripled/wizard-form-shadcnui"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/uitripled/wizard-form-shadcnui/components/uitripled/wizard-form-shadcnui.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/uitripled/wizard-form-shadcnui/components/uitripled/wizard-form-shadcnui.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/badge.tsx",
+        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/button.tsx",
+        "target": "@components/fisher-ui/components/ui/button.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/input.tsx",
+        "target": "@components/fisher-ui/components/ui/input.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/label.tsx",
+        "target": "@components/fisher-ui/components/ui/label.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "conference-ticket",
+    "type": "registry:block",
+    "title": "Conference Ticket",
+    "description": "Animated conference ticket with glassmorphism effects and holographic details.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "class-variance-authority@^0.7.1",
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "radix-ui@^1.6.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "UI Tripled",
+      "url": "@uitripled/conference-ticket-shadcnui"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/uitripled/conference-ticket-shadcnui/components/uitripled/conference-ticket-shadcnui.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/uitripled/conference-ticket-shadcnui/components/uitripled/conference-ticket-shadcnui.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/avatar.tsx",
+        "target": "@components/fisher-ui/components/ui/avatar.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/badge.tsx",
+        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "theater-ticket",
+    "type": "registry:block",
+    "title": "Theater Ticket",
+    "description": "Cinematic theater ticket with rip effect and barcode.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "class-variance-authority@^0.7.1",
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "radix-ui@^1.6.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "UI Tripled",
+      "url": "@uitripled/theater-ticket-shadcnui"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/uitripled/theater-ticket-shadcnui/components/uitripled/theater-ticket-shadcnui.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/uitripled/theater-ticket-shadcnui/components/uitripled/theater-ticket-shadcnui.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/badge.tsx",
+        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cinema-ticket",
+    "type": "registry:block",
+    "title": "Cinema Ticket",
+    "description": "Cinematic theater ticket with rip effect and barcode.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "class-variance-authority@^0.7.1",
+      "clsx@^2.1.1",
+      "framer-motion@^12.23.26",
+      "lucide-react@^0.548.0",
+      "radix-ui@^1.6.7",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "UI Tripled",
+      "url": "@uitripled/cinema-ticket-shadcnui"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/uitripled/cinema-ticket-shadcnui/components/uitripled/cinema-ticket-shadcnui.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/uitripled/cinema-ticket-shadcnui/components/uitripled/cinema-ticket-shadcnui.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/ui/badge.tsx",
+        "target": "@components/fisher-ui/components/ui/badge.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "range-slider",
+    "type": "registry:ui",
+    "title": "Range Slider",
+    "description": "A tactile range slider with keyboard and pointer support.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/range-slider"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/range-slider.tsx",
+        "target": "@components/fisher-ui/components/motion/range-slider.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-slider.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-slider.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "wheel-picker",
+    "type": "registry:ui",
+    "title": "Wheel Picker",
+    "description": "A draggable wheel picker with optional tick feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/wheel-picker"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/wheel-picker.tsx",
+        "target": "@components/fisher-ui/components/motion/wheel-picker.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/tick-sound.ts",
+        "target": "@components/fisher-ui/lib/tick-sound.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "prompt-input-2",
+    "type": "registry:ui",
+    "title": "Prompt Input 2",
+    "description": "An agent prompt composer with model selection and actions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react-dom@^19.2.3",
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/prompt-input"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/prompt-input.tsx",
+        "target": "@components/fisher-ui/components/agents/prompt-input.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/button/base.tsx",
+        "target": "@components/fisher-ui/components/motion/button/base.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/popover-morph.tsx",
+        "target": "@components/fisher-ui/components/motion/popover-morph.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/popover-position.ts",
+        "target": "@components/fisher-ui/components/motion/popover-position.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/select.tsx",
+        "target": "@components/fisher-ui/components/motion/select.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "todo-list",
+    "type": "registry:block",
+    "title": "Todo List",
+    "description": "A collapsible task list for an agent workflow.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/todo-list"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/todo-list.tsx",
+        "target": "@components/fisher-ui/components/agents/todo-list.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "code-block",
+    "type": "registry:ui",
+    "title": "Code Block",
+    "description": "Syntax-highlighted agent code output with copy support.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "shiki@^4.4.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/code-block"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-code.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/code-block.tsx",
+        "target": "@components/fisher-ui/components/agents/code-block.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "approval-card",
+    "type": "registry:block",
+    "title": "Approval Card",
+    "description": "A focused approval surface for agent actions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/approval-card"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/approval-card/index.tsx",
+        "target": "@components/fisher-ui/components/agents/approval-card/index.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/approval-card/types.ts",
+        "target": "@components/fisher-ui/components/agents/approval-card/types.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/button/base.tsx",
+        "target": "@components/fisher-ui/components/motion/button/base.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/checkbox.tsx",
+        "target": "@components/fisher-ui/components/motion/checkbox.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/input.tsx",
+        "target": "@components/fisher-ui/components/motion/input.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/radio.tsx",
+        "target": "@components/fisher-ui/components/motion/radio.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "file-diff",
+    "type": "registry:ui",
+    "title": "File Diff",
+    "description": "A collapsible source diff with added and removed lines.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "shiki@^4.4.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/file-diff"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-code.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/file-diff.tsx",
+        "target": "@components/fisher-ui/components/agents/file-diff.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/tool-result.tsx",
+        "target": "@components/fisher-ui/components/agents/tool-result.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "tool-result",
+    "type": "registry:ui",
+    "title": "Tool Result",
+    "description": "An expandable result panel for agent tools.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "shiki@^4.4.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/tool-result"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-code.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/tool-result.tsx",
+        "target": "@components/fisher-ui/components/agents/tool-result.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap-roll.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/action-swap.tsx",
+        "target": "@components/fisher-ui/components/motion/action-swap.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "streaming-response",
+    "type": "registry:ui",
+    "title": "Streaming Response",
+    "description": "An assistant response surface with source and feedback actions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/streaming-response"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/citations.tsx",
+        "target": "@components/fisher-ui/components/agents/citations.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/streaming-response.tsx",
+        "target": "@components/fisher-ui/components/agents/streaming-response.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/favicon.ts",
+        "target": "@components/fisher-ui/lib/favicon.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "image-generation",
+    "type": "registry:ui",
+    "title": "Image Generation",
+    "description": "An image-generation state with progress treatment.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/image-generation"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/image-generation.tsx",
+        "target": "@components/fisher-ui/components/agents/image-generation.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "image-generation-2",
+    "type": "registry:ui",
+    "title": "Image Generation 2",
+    "description": "A loading state for AI images that turns into the real picture when it arrives.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Rare UI",
+      "url": "https://www.rareui.com/components/gridreveal"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/ui/grid-reveal.tsx",
+        "target": "@components/fisher-ui/components/ui/grid-reveal.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "tool-approval",
+    "type": "registry:ui",
+    "title": "Tool Approval",
+    "description": "A permission prompt for agent tool calls.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "shiki@^4.4.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/tool-approval"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-code.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-code.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/tool-approval.tsx",
+        "target": "@components/fisher-ui/components/agents/tool-approval.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "citations",
+    "type": "registry:ui",
+    "title": "Citations",
+    "description": "Collapsible linked source citations for agent answers.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/citations"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/citations.tsx",
+        "target": "@components/fisher-ui/components/agents/citations.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/favicon.ts",
+        "target": "@components/fisher-ui/lib/favicon.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "agent-activity",
+    "type": "registry:ui",
+    "title": "Agent Activity",
+    "description": "A live activity timeline for agent work.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "light": {
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "muted": "oklch(0.967 0.001 286.375)",
+        "muted-foreground": "oklch(0.552 0.016 285.938)"
+      },
+      "dark": {
+        "foreground": "oklch(0.985 0 0)",
+        "muted": "oklch(0.274 0.006 286.033)",
+        "muted-foreground": "oklch(0.705 0.015 286.067)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/agent-activity"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-activity/activity-row.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-activity/activity-row.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/agent-activity/index.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-activity/index.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/agent-activity/types.ts",
+        "target": "@components/fisher-ui/components/agents/agent-activity/types.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-disclosure.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
+        "target": "@components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/text-shimmer.tsx",
+        "target": "@components/fisher-ui/components/motion/text-shimmer.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/text-shimmer-styles.ts",
+        "target": "@components/fisher-ui/lib/text-shimmer-styles.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "agent-activity-2",
+    "type": "registry:ui",
+    "title": "Agent Activity 2",
+    "description": "Expandable agent trace with Steps, Reasoning, Search, and Coding variants.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)"
+      },
+      "light": {
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "muted": "oklch(0.967 0.001 286.375)",
+        "muted-foreground": "oklch(0.552 0.016 285.938)"
+      },
+      "dark": {
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)",
+        "foreground": "oklch(0.985 0 0)",
+        "muted": "oklch(0.274 0.006 286.033)",
+        "muted-foreground": "oklch(0.705 0.015 286.067)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/agent-activity-2"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/agent-activity-2.tsx",
+        "target": "@components/fisher-ui/components/agents/agent-activity-2.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
+        "target": "@components/fisher-ui/components/agents/loading-states/thinking-shimmer.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/text-shimmer.tsx",
+        "target": "@components/fisher-ui/components/motion/text-shimmer.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/text-shimmer-styles.ts",
+        "target": "@components/fisher-ui/lib/text-shimmer-styles.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "reasoning-text",
+    "type": "registry:ui",
+    "title": "Reasoning Text",
+    "description": "Animated reasoning status text for agent progress.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      },
+      "light": {
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "muted": "oklch(0.967 0.001 286.375)",
+        "muted-foreground": "oklch(0.552 0.016 285.938)"
+      },
+      "dark": {
+        "foreground": "oklch(0.985 0 0)",
+        "muted": "oklch(0.274 0.006 286.033)",
+        "muted-foreground": "oklch(0.705 0.015 286.067)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/reasoning-text"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/loading-states/reasoning-text.tsx",
+        "target": "@components/fisher-ui/components/agents/loading-states/reasoning-text.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/loader.tsx",
+        "target": "@components/fisher-ui/components/motion/loader.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/text-shimmer-styles.ts",
+        "target": "@components/fisher-ui/lib/text-shimmer-styles.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "loading-states",
+    "type": "registry:ui",
+    "title": "Loading States",
+    "description": "Pixel-grid loading indicator with Drive, Dots, and Orbit variants.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "light": {
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "muted": "oklch(0.967 0.001 286.375)",
+        "muted-foreground": "oklch(0.552 0.016 285.938)"
+      },
+      "dark": {
+        "foreground": "oklch(0.985 0 0)",
+        "muted": "oklch(0.274 0.006 286.033)",
+        "muted-foreground": "oklch(0.705 0.015 286.067)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/loading-states"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/loading-states/loading-state.module.css",
+        "target": "@components/fisher-ui/components/agents/loading-states/loading-state.module.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/loading-states/loading-state.tsx",
+        "target": "@components/fisher-ui/components/agents/loading-states/loading-state.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "selection-actions",
+    "type": "registry:ui",
+    "title": "Selection Actions",
+    "description": "A contextual AI action bar attached beneath selected text.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/selection-actions"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/selection-actions.tsx",
+        "target": "@components/fisher-ui/components/agents/selection-actions.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "recommendation-card",
+    "type": "registry:block",
+    "title": "Recommendation Card",
+    "description": "An agent recommendation card with alternatives and confirmation.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/recommendation-card"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/recommendation-card.tsx",
+        "target": "@components/fisher-ui/components/agents/recommendation-card.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "task-rows",
+    "type": "registry:ui",
+    "title": "Task Rows",
+    "description": "Expandable task rows that show an agent workflow's live progress.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)"
+      },
+      "light": {
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)"
+      },
+      "dark": {
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/task-rows"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/task-rows.tsx",
+        "target": "@components/fisher-ui/components/agents/task-rows.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "thinking-orbs",
+    "type": "registry:ui",
+    "title": "Thinking Orbs",
+    "description": "Nine hand-tuned, locally vendored thought-orb states for AI agents.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Thinking Orbs",
+      "url": "https://github.com/Jakubantalik/thinking-orbs"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/braid.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/braid.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/core.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/core.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/lattice.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/lattice.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/morph.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/morph.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/orbits.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/orbits.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/profiles.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/profiles.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/registry.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/registry.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/ribbon.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/ribbon.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/types.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/types.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/engine/web.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/engine/web.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/index.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/index.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/LICENSE.md",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/LICENSE.md",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/presets.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/presets.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/theme.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/theme.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/ThinkingOrb.tsx",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/ThinkingOrb.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/thinking-orbs/types.ts",
+        "target": "@components/fisher-ui/components/agents/thinking-orbs/types.ts",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "structured-output",
+    "type": "registry:ui",
+    "title": "Structured Output",
+    "description": "A structured AI model comparison table with branded model rows.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "light": {
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "card": "oklch(1 0 0)",
+        "muted": "oklch(0.967 0.001 286.375)",
+        "muted-foreground": "oklch(0.552 0.016 285.938)",
+        "border": "oklch(0.92 0.004 286.32)"
+      },
+      "dark": {
+        "foreground": "oklch(0.985 0 0)",
+        "card": "oklch(0.21 0.006 285.885)",
+        "muted": "oklch(0.274 0.006 286.033)",
+        "muted-foreground": "oklch(0.705 0.015 286.067)",
+        "border": "oklch(0.274 0.006 286.033)"
+      }
+    },
+    "source": {
+      "name": "Satisfy UI",
+      "url": "local"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/agents/structured-output/DataTable.module.css",
+        "target": "@components/fisher-ui/components/agents/structured-output/DataTable.module.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/structured-output/DataTable.tsx",
+        "target": "@components/fisher-ui/components/agents/structured-output/DataTable.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/agents/structured-output/index.ts",
+        "target": "@components/fisher-ui/components/agents/structured-output/index.ts",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "morphing-tabs",
+    "type": "registry:ui",
+    "title": "Morphing Tabs",
+    "description": "Draggable tabs that smoothly morph between active states.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react-dom@^19.2.3",
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/morphing-tabs"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/morphing-tabs.tsx",
+        "target": "@components/fisher-ui/components/motion/morphing-tabs.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "swipeable-list",
+    "type": "registry:ui",
+    "title": "Swipeable List",
+    "description": "Touch-friendly list rows with contextual swipe actions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/swipeable-list"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/swipeable-list.tsx",
+        "target": "@components/fisher-ui/components/motion/swipeable-list.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "overflow-actions",
+    "type": "registry:ui",
+    "title": "Overflow Actions",
+    "description": "A compact action row that expands to reveal more controls.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/overflow-actions"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/overflow-actions.tsx",
+        "target": "@components/fisher-ui/components/motion/overflow-actions.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "expandable-action-bar",
+    "type": "registry:ui",
+    "title": "Expandable Action Bar",
+    "description": "An adaptive action bar that expands labels on interaction.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/expandable-action-bar"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/expandable-action-bar.tsx",
+        "target": "@components/fisher-ui/components/motion/expandable-action-bar.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "polymarket",
+    "type": "registry:ui",
+    "title": "Polymarket",
+    "description": "A responsive trade ticket for binary market outcomes.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif",
+        "color-red-3": "var(--dqnamo-red-3, #fbecec)"
+      },
+      "light": {
+        "dqnamo-red-3": "color(display-p3 0.985 0.925 0.925)"
+      },
+      "dark": {
+        "dqnamo-red-3": "color(display-p3 0.211 0.081 0.099)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/prediction-market"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/button/base.tsx",
+        "target": "@components/fisher-ui/components/motion/button/base.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/button/stateful.tsx",
+        "target": "@components/fisher-ui/components/motion/button/stateful.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/number-ticker.tsx",
+        "target": "@components/fisher-ui/components/motion/number-ticker.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/prediction-market.tsx",
+        "target": "@components/fisher-ui/components/motion/prediction-market.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/tabs.tsx",
+        "target": "@components/fisher-ui/components/motion/tabs.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-hover-capable.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "otp-input",
+    "type": "registry:ui",
+    "title": "OTP Input",
+    "description": "Accessible one-time passcode entry with validation feedback.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/otp-input"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/otp-input.tsx",
+        "target": "@components/fisher-ui/components/motion/otp-input.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "bloom-menu",
+    "type": "registry:ui",
+    "title": "Bloom Menu",
+    "description": "A compact creation menu that blooms into available actions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/bloom-menu"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/bloom-menu.tsx",
+        "target": "@components/fisher-ui/components/motion/bloom-menu.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "crypto-swap",
+    "type": "registry:block",
+    "title": "Crypto Swap",
+    "description": "A multi-chain token swap interface with live quote states.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/swap"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/swap.tsx",
+        "target": "@components/fisher-ui/components/motion/swap.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/constants.ts",
+        "target": "@components/fisher-ui/components/motion/swap/constants.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/controls.tsx",
+        "target": "@components/fisher-ui/components/motion/swap/controls.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/data.ts",
+        "target": "@components/fisher-ui/components/motion/swap/data.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/field.tsx",
+        "target": "@components/fisher-ui/components/motion/swap/field.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/quote-row.tsx",
+        "target": "@components/fisher-ui/components/motion/swap/quote-row.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/token-badges.tsx",
+        "target": "@components/fisher-ui/components/motion/swap/token-badges.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/token-picker.tsx",
+        "target": "@components/fisher-ui/components/motion/swap/token-picker.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/types.ts",
+        "target": "@components/fisher-ui/components/motion/swap/types.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/swap/utils.ts",
+        "target": "@components/fisher-ui/components/motion/swap/utils.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "command-palette",
+    "type": "registry:ui",
+    "title": "Command Palette",
+    "description": "Keyboard-first command search with grouped actions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react-dom@^19.2.3",
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/command-palette"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/command-palette.tsx",
+        "target": "@components/fisher-ui/components/motion/command-palette.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "preview-rail",
+    "type": "registry:ui",
+    "title": "Preview Rail",
+    "description": "A minimal navigation rail that reveals contextual previews on hover, focus, or touch.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/preview-rail"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/preview-rail.tsx",
+        "target": "@components/fisher-ui/components/motion/preview-rail.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-dismiss.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-dismiss.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-hover-gesture.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-hover-gesture.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/hooks/use-tap-gesture.ts",
+        "target": "@components/fisher-ui/lib/hooks/use-tap-gesture.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/lib/touch.ts",
+        "target": "@components/fisher-ui/lib/touch.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "emoji-reaction",
+    "type": "registry:ui",
+    "title": "Emoji Reaction",
+    "description": "A reaction picker with Apple emoji, keyboard navigation, press-and-hold bursts, and responsive placement.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@radix-ui/react-slot@^1.3.3",
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "react-apple-emojis@^3.0.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Local",
+      "url": "local"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/emoji-reaction.tsx",
+        "target": "@components/fisher-ui/components/motion/emoji-reaction.tsx",
+        "type": "registry:file"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "chat-gpt-orb",
+    "type": "registry:ui",
+    "title": "ChatGPT Orb",
+    "description": "A WebGL orb with a slowly evolving fluid color field.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Local",
+      "url": "local"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/fluid-orb.tsx",
+        "target": "@components/fisher-ui/components/motion/fluid-orb.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cover-gallery",
+    "type": "registry:block",
+    "title": "Cover Gallery",
+    "description": "A three-dimensional coverflow gallery.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/coverflowgallery"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/coverflowgallery.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/coverflowgallery.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cube-carousel",
+    "type": "registry:block",
+    "title": "Cube Carousel",
+    "description": "An interactive three-dimensional box carousel.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "framer-motion@^12.23.26"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/boxcarousel"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/boxcarousel.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/boxcarousel.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "gallery-passage",
+    "type": "registry:block",
+    "title": "Gallery Passage",
+    "description": "An immersive WebGL image tunnel.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "three@^0.181.2"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7",
+      "@types/three@^0.181.0"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/gallery-tunnel"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/gallery-tunnel.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/gallery-tunnel.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "flow-carousel",
+    "type": "registry:block",
+    "title": "Flow Carousel",
+    "description": "A smooth coverflow carousel with active cards.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "framer-motion@^12.23.26"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/coverflowcarousel"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/coverflowcarousel.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/coverflowcarousel.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "orbit-carousel",
+    "type": "registry:block",
+    "title": "Orbit Carousel",
+    "description": "A draggable, rotating three-dimensional carousel.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/roundcarousel"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/roundcarousel.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/roundcarousel.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "globe",
+    "type": "registry:ui",
+    "title": "Globe",
+    "description": "An interactive, rotating WebGL globe.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "d3-geo@^3.1.1",
+      "three@^0.181.2"
+    ],
+    "devDependencies": [
+      "@types/d3-geo@^3.1.0",
+      "@types/react@^19.2.7",
+      "@types/three@^0.181.0"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/globe"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/globe.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/globe.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cosmic-orb",
+    "type": "registry:ui",
+    "title": "Cosmic Orb",
+    "description": "A responsive animated WebGL orb.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "Originkit",
+      "url": "originkit/cosmic-orb"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/originkit/ui/cosmic-orb.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/originkit/ui/cosmic-orb.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cassette-player",
+    "type": "registry:block",
+    "title": "Cassette Player",
+    "description": "Tactile cassette audio player with animated reels and captions.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@base-ui/react@^1.7.0",
+      "@phosphor-icons/react@^2.1.10",
+      "clsx@^2.1.1",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-grayscale-1": "var(--receipt-grayscale-1, #fafafa)",
+        "color-grayscale-3": "var(--receipt-grayscale-3, #e5e5e5)",
+        "color-grayscale-5": "var(--receipt-grayscale-5, #a3a3a3)",
+        "color-grayscale-12": "var(--receipt-grayscale-12, #171717)",
+        "color-red-4": "var(--dqnamo-red-4, #ffdddd)"
+      },
+      "light": {
+        "receipt-grayscale-1": "color(display-p3 0.992 0.992 0.989)",
+        "receipt-grayscale-3": "color(display-p3 0.943 0.942 0.936)",
+        "receipt-grayscale-5": "color(display-p3 0.885 0.883 0.873)",
+        "receipt-grayscale-12": "color(display-p3 0.129 0.126 0.111)",
+        "dqnamo-red-4": "color(display-p3 0.999 0.866 0.866)"
+      },
+      "dark": {
+        "receipt-grayscale-1": "color(display-p3 0.067 0.067 0.063)",
+        "receipt-grayscale-3": "color(display-p3 0.135 0.135 0.129)",
+        "receipt-grayscale-5": "color(display-p3 0.193 0.192 0.183)",
+        "receipt-grayscale-12": "color(display-p3 0.933 0.933 0.926)",
+        "dqnamo-red-4": "color(display-p3 0.287 0.079 0.113)"
+      }
+    },
+    "source": {
+      "name": "dqnamo",
+      "url": "https://www.dqnamo.com/experiments/cassette-player"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/dqnamo/cassette-player/components/ui/cassette-player.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/dqnamo/cassette-player/components/ui/cassette-player.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "public/audio/one-small-step.vtt",
+        "target": "~/public/audio/one-small-step.vtt",
+        "type": "registry:file"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "cloud-drift",
+    "type": "registry:ui",
+    "title": "Cloud Drift",
+    "description": "Animated volumetric clouds rendered with TypeGPU and WebGPU.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "docs": "Cloud Drift requires a WebGPU-capable browser and HTTPS (or localhost). Its compiled runtime is included under public/.",
+    "source": {
+      "name": "TypeGPU",
+      "url": "https://docs.swmansion.com/TypeGPU/examples/#example=rendering--clouds"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/typegpu/clouds/components/ui/clouds.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/typegpu/clouds/components/ui/clouds.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "public/typegpu-clouds/assets/index-DURs0Ng1.js",
+        "target": "~/public/typegpu-clouds/assets/index-DURs0Ng1.js",
+        "type": "registry:file"
+      },
+      {
+        "path": "public/typegpu-clouds/index.html",
+        "target": "~/public/typegpu-clouds/index.html",
+        "type": "registry:file"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "flowing-gradient",
+    "type": "registry:ui",
+    "title": "Flowing Gradient",
+    "description": "WebGL animated gradient background with color, swirl, and shape presets.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "next-themes@^0.4.6"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "tom UI",
+      "url": "https://21st.dev/community/components/tom_ui/animated-gradient"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/animated-gradient.tsx",
+        "target": "@components/fisher-ui/components/animated-gradient.tsx",
+        "type": "registry:component"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "jelly-slider",
+    "type": "registry:ui",
+    "title": "Jelly Slider",
+    "description": "Interactive ray-marched jelly slider with physics-based deformation.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "docs": "Jelly Slider requires a WebGPU-capable browser and HTTPS (or localhost). Its compiled runtime is included under public/.",
+    "source": {
+      "name": "TypeGPU",
+      "url": "https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-slider"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/typegpu/jelly-slider/components/ui/jelly-slider.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/typegpu/jelly-slider/components/ui/jelly-slider.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "public/typegpu-jelly-slider/assets/index-Dba2MReV.js",
+        "target": "~/public/typegpu-jelly-slider/assets/index-Dba2MReV.js",
+        "type": "registry:file"
+      },
+      {
+        "path": "public/typegpu-jelly-slider/index.html",
+        "target": "~/public/typegpu-jelly-slider/index.html",
+        "type": "registry:file"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "confetti",
+    "type": "registry:ui",
+    "title": "Confetti",
+    "description": "GPU-animated confetti particles with a relaunch control.",
+    "author": "Fisher UI",
+    "dependencies": [],
+    "devDependencies": [],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "docs": "Confetti requires a WebGPU-capable browser and HTTPS (or localhost). Its compiled runtime is included under public/.",
+    "source": {
+      "name": "TypeGPU",
+      "url": "https://docs.swmansion.com/TypeGPU/examples/"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/jakob-ui/typegpu/confetti/components/ui/confetti.tsx",
+        "target": "@components/fisher-ui/components/jakob-ui/typegpu/confetti/components/ui/confetti.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "public/typegpu-confetti/assets/index-CkFhpbuF.js",
+        "target": "~/public/typegpu-confetti/assets/index-CkFhpbuF.js",
+        "type": "registry:file"
+      },
+      {
+        "path": "public/typegpu-confetti/assets/index-DKuysgD4.css",
+        "target": "~/public/typegpu-confetti/assets/index-DKuysgD4.css",
+        "type": "registry:file"
+      },
+      {
+        "path": "public/typegpu-confetti/index.html",
+        "target": "~/public/typegpu-confetti/index.html",
+        "type": "registry:file"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "text-reveal",
+    "type": "registry:ui",
+    "title": "Text Reveal",
+    "description": "Scroll-driven text reveal that transitions each character from a muted watermark to the final reading color.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "font-custom": "\"Instrument Serif\", serif"
+      }
+    },
+    "source": {
+      "name": "Great UI",
+      "url": "https://www.great-ui.com/r/text-reveal.json"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/ui/TextReveal.tsx",
+        "target": "@components/fisher-ui/components/ui/TextReveal.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "number-ticker",
+    "type": "registry:ui",
+    "title": "Number Ticker",
+    "description": "Animated rolling number display with viewport-aware entry, optional digit blur, and value updates.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "clsx@^2.1.1",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react@^19.2.7"
+    ],
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/number-ticker"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/animated-number.tsx",
+        "target": "@components/fisher-ui/components/motion/animated-number.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/number-ticker.tsx",
+        "target": "@components/fisher-ui/components/motion/number-ticker.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  },
+  {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    "name": "table",
+    "type": "registry:ui",
+    "title": "Table",
+    "description": "Virtualized data table with selectable, sortable, resizable, and reorderable columns.",
+    "author": "Fisher UI",
+    "dependencies": [
+      "@tanstack/react-virtual@^3.14.9",
+      "clsx@^2.1.1",
+      "lucide-react@^0.548.0",
+      "motion@^13.1.0",
+      "tailwind-merge@^3.4.0"
+    ],
+    "devDependencies": [
+      "@types/react-dom@^19.2.3",
+      "@types/react@^19.2.7"
+    ],
+    "cssVars": {
+      "theme": {
+        "color-primary": "var(--primary)"
+      },
+      "light": {
+        "primary": "var(--color-neutral-800)"
+      },
+      "dark": {
+        "primary": "var(--color-neutral-100)"
+      }
+    },
+    "source": {
+      "name": "BEUI",
+      "url": "@beui/table"
+    },
+    "files": [
+      {
+        "path": "components/fisher-ui/components/motion/checkbox.tsx",
+        "target": "@components/fisher-ui/components/motion/checkbox.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/switch.tsx",
+        "target": "@components/fisher-ui/components/motion/switch.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/editable-cell.tsx",
+        "target": "@components/fisher-ui/components/motion/table/editable-cell.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/index.tsx",
+        "target": "@components/fisher-ui/components/motion/table/index.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/row-handle.tsx",
+        "target": "@components/fisher-ui/components/motion/table/row-handle.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/skeleton-rows.tsx",
+        "target": "@components/fisher-ui/components/motion/table/skeleton-rows.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/table-header.tsx",
+        "target": "@components/fisher-ui/components/motion/table/table-header.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/table-menu.tsx",
+        "target": "@components/fisher-ui/components/motion/table/table-menu.tsx",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/types.ts",
+        "target": "@components/fisher-ui/components/motion/table/types.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/use-column-reorder.ts",
+        "target": "@components/fisher-ui/components/motion/table/use-column-reorder.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/use-column-resize.ts",
+        "target": "@components/fisher-ui/components/motion/table/use-column-resize.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/use-column-sort.ts",
+        "target": "@components/fisher-ui/components/motion/table/use-column-sort.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/use-row-selection.ts",
+        "target": "@components/fisher-ui/components/motion/table/use-row-selection.ts",
+        "type": "registry:hook"
+      },
+      {
+        "path": "components/fisher-ui/components/motion/table/utils.ts",
+        "target": "@components/fisher-ui/components/motion/table/utils.ts",
+        "type": "registry:component"
+      },
+      {
+        "path": "components/fisher-ui/lib/ease.ts",
+        "target": "@components/fisher-ui/lib/ease.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/touch.ts",
+        "target": "@components/fisher-ui/lib/touch.ts",
+        "type": "registry:lib"
+      },
+      {
+        "path": "components/fisher-ui/lib/utils.ts",
+        "target": "@components/fisher-ui/lib/utils.ts",
+        "type": "registry:lib"
+      }
+    ]
+  }
+]
