@@ -1,32 +1,65 @@
-# Fisher UI components
+# Fisher UI
 
-This repository contains the editable source of 118 ready Fisher UI components, shared helpers, hooks and required assets. It contains no website application, library landing page, personal CV, environment files or portfolio Git history. Developer-labelled components are excluded.
+Expressive React components with thoughtful motion and interaction. Explore 118 components and UI blocks, install the ones you need, and make them your own.
 
-## Install a component
+[Explore the library](https://jakobfisker.dk/en/ui) · [Try Liquid Metal](https://jakobfisker.dk/en/ui/components/liquid-metal)
 
-For example, install [Liquid Metal](https://jakobfisker.dk/en/ui/components/liquid-metal):
+## Installation
+
+Add a component to your project with the shadcn CLI. Start with **Liquid Metal**, a button with a reflective, fluid surface:
 
 ```sh
 npx shadcn@latest add https://jakobfisker.dk/r/liquid-metal.json
 ```
 
-To install another component, copy the command from its [Fisher UI documentation page](https://jakobfisker.dk/en/ui). Each component can be installed independently. The CLI also installs its npm dependencies and global CSS. `catalog.json` maps every component to its files, dependencies and CSS.
+For another component, find it in the [library](https://jakobfisker.dk/en/ui) and copy its installation command.
 
-## Read or check all source
+Each component installs independently. The CLI copies its source and required helpers into your project, installs its dependencies, and adds any required global styles. You can then edit the installed files to fit your design.
+
+## Requirements
+
+- React 19 and TypeScript.
+- Tailwind CSS 4.
+- An existing project configured with shadcn/ui.
+
+Some components require Next.js. WebGPU components require a compatible browser and HTTPS or localhost; check the component's documentation for specific requirements.
+
+## Browse the source
+
+Components are organized by name, with shared utilities kept together:
+
+```text
+components/
+  liquid-metal/
+  prompt-input-2/
+  receipt-printer/
+  shared/
+  ...
+gpu/
+public/
+catalog.json
+```
+
+- **`components/`** — component source, styles, and shared helpers.
+- **`gpu/`** — editable WebGPU demo runtimes.
+- **`public/`** — required assets and compiled GPU runtimes.
+- **`catalog.json`** — component files, dependencies, and style configuration.
+
+## Local development
+
+Clone the repository and check the component source:
 
 ```sh
+git clone https://github.com/JakobDrist/fisher-ui.git
+cd fisher-ui
 npm ci
 npm run typecheck
 ```
 
-Source is organized by component name under `components/`, with reused helpers in `components/shared/`. This source mirror uses a simpler layout than the website's install registry. React 19, TypeScript and Tailwind CSS 4 are the consumer baseline; components using Next.js or WebGPU require those runtimes. This repository is source-only and does not run the showcase website.
+To rebuild the GPU runtimes after editing files in `gpu/`:
 
-Editable WebGPU originals live in `gpu/`, with their compiled iframe assets in `public/`. Run `npm run build:gpu` to rebuild them. The TypeScript check covers the installable React source; the GPU originals are compiled by Vite with the TypeGPU plugin.
+```sh
+npm run build:gpu
+```
 
-## Updates
-
-This is a generated source mirror. Edit components in the main Fisher UI project, then regenerate the export using `npm run registry:export -- /path/to/a/new-directory`. Copy the resulting files into this repository and review the diff before committing. Direct edits here are not automatically imported back into the website. Cross-repository automatic publishing has not been configured.
-
-## Attribution
-
-Existing copyright comments and component-local license notices are retained with their source files. No blanket replacement license is asserted for third-party components.
+This repository contains component source. View the interactive previews and installation instructions on the [Fisher UI website](https://jakobfisker.dk/en/ui).
